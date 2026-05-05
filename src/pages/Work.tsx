@@ -1,0 +1,229 @@
+﻿import { useEffect, useState } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Play, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import ScrollReveal from '../components/ScrollReveal';
+import { siteImages } from '../assets/siteImages';
+import { projects } from '../data/siteData';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const categories = ['ALL', 'FILM', 'STREAMING', 'BROADCAST', 'EXHIBITION'];
+
+export default function Work() {
+  const [activeFilter, setActiveFilter] = useState('ALL');
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+
+  const filteredProjects = activeFilter === 'ALL'
+    ? projects
+    : projects.filter(p => p.category.toUpperCase() === activeFilter);
+
+  const openProject = (project: typeof projects[0]) => setSelectedProject(project);
+  const closeModal = () => setSelectedProject(null);
+
+  const nextProject = () => {
+    if (!selectedProject) return;
+    const idx = filteredProjects.findIndex(p => p.id === selectedProject.id);
+    const next = filteredProjects[(idx + 1) % filteredProjects.length];
+    setSelectedProject(next);
+  };
+
+  const prevProject = () => {
+    if (!selectedProject) return;
+    const idx = filteredProjects.findIndex(p => p.id === selectedProject.id);
+    const prev = filteredProjects[(idx - 1 + filteredProjects.length) % filteredProjects.length];
+    setSelectedProject(prev);
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowRight') nextProject();
+      if (e.key === 'ArrowLeft') prevProject();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [selectedProject, filteredProjects]);
+
+  return (
+    <div className="bg-[var(--color-void)] min-h-screen">
+      <Navbar />
+
+      {/* Hero / Showreel Embed */}
+      <section className="pt-24 pb-16">
+        <div className="max-w-[1200px] mx-auto px-[5vw]">
+          <ScrollReveal>
+            <div className="aspect-video bg-[var(--color-graphite)] relative overflow-hidden">
+              <video
+                src={siteImages.showreelVideo}
+                className="w-full h-full object-cover"
+                controls
+                playsInline
+                preload="metadata"
+                poster={siteImages.heroSplash}
+              />
+              <p className="absolute bottom-6 left-6 font-mono text-[10px] text-[var(--color-silver)] tracking-[0.15em] pointer-events-none">
+                Olalekan Swanky Isiaka PORTFOLIO 2024
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Filter Bar */}
+      <section className="sticky top-[72px] z-[100] bg-[var(--color-void)]/90 backdrop-blur-md border-b border-[var(--color-steel)] py-4">
+        <div className="max-w-[1440px] mx-auto px-[5vw] flex gap-4 md:gap-8 overflow-x-auto">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveFilter(cat)}
+              className={`font-nav text-sm tracking-[0.15em] whitespace-nowrap pb-1 transition-colors duration-200 ${
+                activeFilter === cat
+                  ? 'text-[var(--color-gold)] border-b-2 border-[var(--color-gold)]'
+                  : 'text-[var(--color-silver)] hover:text-[var(--color-ivory)]'
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* Project Grid */}
+      <section className="section-padding">
+        <div className="max-w-[1440px] mx-auto px-[5vw]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredProjects.map((project, i) => (
+              <ScrollReveal key={project.id} delay={i * 0.08}>
+                <div
+                  onClick={() => openProject(project)}
+                  className="group relative overflow-hidden bg-[var(--color-graphite)] cursor-pointer"
+                  data-cursor-hover
+                >
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--gradient-card-from)] via-[var(--gradient-hero-from)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                    <p className="font-mono text-[10px] text-[var(--color-gold)] mb-1">
+                      {project.category} &mdash; {project.year}
+                    </p>
+                    <h4 className="font-display italic text-2xl text-[var(--color-ivory)]">{project.title}</h4>
+                    <p className="font-body text-sm text-[var(--color-chalk)] mt-1">{project.client}</p>
+                  </div>
+                  <div className="absolute top-4 right-4 w-10 h-10 rounded-full border border-[var(--color-ivory)] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <Play size={14} className="text-[var(--color-ivory)] ml-0.5" />
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Project Modal */}
+      {selectedProject && (
+        <div className="fixed inset-0 z-[2000] bg-[rgba(0,0,0,0.95)] flex items-center justify-center p-[5vw]">
+          <button
+            onClick={closeModal}
+            className="absolute top-6 right-6 text-[var(--color-ivory)] hover:text-[var(--color-gold)] transition-colors z-10"
+            data-cursor-hover
+          >
+            <X size={32} />
+          </button>
+
+          <button
+            onClick={prevProject}
+            className="absolute left-6 top-1/2 -translate-y-1/2 text-[var(--color-ivory)] hover:text-[var(--color-gold)] transition-colors z-10 hidden md:block"
+            data-cursor-hover
+          >
+            <ChevronLeft size={40} />
+          </button>
+
+          <button
+            onClick={nextProject}
+            className="absolute right-6 top-1/2 -translate-y-1/2 text-[var(--color-ivory)] hover:text-[var(--color-gold)] transition-colors z-10 hidden md:block"
+            data-cursor-hover
+          >
+            <ChevronRight size={40} />
+          </button>
+
+          <div className="max-w-[1000px] w-full max-h-[90vh] overflow-y-auto">
+            <div className="aspect-video bg-[var(--color-graphite)] mb-8 relative">
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full border-2 border-[var(--color-ivory)] flex items-center justify-center">
+                  <Play size={24} className="text-[var(--color-ivory)] ml-0.5" />
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <p className="font-mono text-[10px] text-[var(--color-gold)] mb-2">
+                  {selectedProject.category} &mdash; {selectedProject.year}
+                </p>
+                <h2 className="font-display italic text-4xl text-[var(--color-ivory)] mb-4">
+                  {selectedProject.title}
+                </h2>
+                <p className="font-body text-[var(--color-chalk)] leading-relaxed mb-6">
+                  {selectedProject.description}
+                </p>
+                <div className="space-y-2">
+                  <p className="font-mono text-[10px] text-[var(--color-silver)]">
+                    Art Director: <span className="text-[var(--color-chalk)]">{selectedProject.credits.dp}</span>
+                  </p>
+                  <p className="font-mono text-[10px] text-[var(--color-silver)]">
+                    Director: <span className="text-[var(--color-chalk)]">{selectedProject.credits.director}</span>
+                  </p>
+                  <p className="font-mono text-[10px] text-[var(--color-silver)]">
+                    Client: <span className="text-[var(--color-chalk)]">{selectedProject.credits.client}</span>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <h4 className="font-nav text-sm text-[var(--color-gold)] tracking-[0.15em] mb-4">TECHNICAL</h4>
+                <div className="space-y-3">
+                  <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
+                    <span className="font-mono text-[10px] text-[var(--color-silver)]">MEDIUM</span>
+                    <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.camera}</span>
+                  </div>
+                  <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
+                    <span className="font-mono text-[10px] text-[var(--color-silver)]">MATERIALS</span>
+                    <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.lenses}</span>
+                  </div>
+                  <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
+                    <span className="font-mono text-[10px] text-[var(--color-silver)]">LOCATION</span>
+                    <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.location}</span>
+                  </div>
+                  <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
+                    <span className="font-mono text-[10px] text-[var(--color-silver)]">YEAR</span>
+                    <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.year}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <Footer />
+    </div>
+  );
+}
+
