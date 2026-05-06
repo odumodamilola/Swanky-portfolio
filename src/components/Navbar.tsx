@@ -36,16 +36,16 @@ export default function Navbar() {
       <nav
         ref={navRef}
         className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-500 ${
-          scrolled ? 'bg-[var(--color-overlay)] backdrop-blur-md' : 'bg-transparent'
+          scrolled ? 'bg-[var(--color-overlay)] backdrop-blur-md nav-scrolled' : 'bg-transparent nav-transparent'
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-[5vw] py-5 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Link to="/" className="font-display text-xl italic text-[var(--color-ivory)] tracking-wide">
+            <Link to="/" className={`font-display text-xl italic tracking-wide transition-colors duration-300 ${scrolled ? 'text-[var(--color-ivory)]' : 'text-[#F0EDE6]'}`}>
               OSI
             </Link>
             {/* Light/Dark mode toggle */}
-            <LightModeToggle />
+            <LightModeToggle scrolled={scrolled} />
           </div>
 
           {/* Desktop Nav */}
@@ -54,7 +54,7 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`nav-link ${location.pathname === link.path ? 'text-[var(--color-ivory)]' : ''}`}
+                className={`nav-link ${scrolled ? '' : 'nav-link-hero'} ${location.pathname === link.path ? (scrolled ? 'text-[var(--color-ivory)]' : '!text-[#F0EDE6]') : ''}`}
               >
                 {link.label}
               </Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
 
           {/* Mobile Hamburger */}
           <button
-            className="lg:hidden text-[var(--color-ivory)] p-2"
+            className={`lg:hidden p-2 transition-colors duration-300 ${scrolled ? 'text-[var(--color-ivory)]' : 'text-[#F0EDE6]'}`}
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
           >
@@ -90,7 +90,7 @@ export default function Navbar() {
             <Link
               key={link.path}
               to={link.path}
-              className="font-nav text-2xl text-[var(--color-silver)] hover:text-[var(--color-gold)] transition-colors duration-300"
+              className="font-nav text-2xl text-[var(--color-ivory)] hover:text-[var(--color-gold)] transition-colors duration-300"
               style={{
                 transitionDelay: menuOpen ? `${i * 50}ms` : '0ms',
                 transform: menuOpen ? 'translateY(0)' : 'translateY(20px)',

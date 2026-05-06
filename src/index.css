@@ -213,6 +213,14 @@
     position: relative;
   }
 
+  .nav-link-hero {
+    color: #8A8A8A;
+  }
+
+  .nav-link-hero:hover {
+    color: #F0EDE6;
+  }
+
   .nav-link::after {
     content: '';
     position: absolute;

@@ -1,13 +1,13 @@
 ﻿import { Sun, Moon } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 
-export default function LightModeToggle() {
+export default function LightModeToggle({ scrolled = true }: { scrolled?: boolean }) {
   const { resolvedTheme, toggleTheme } = useTheme();
   const isLight = resolvedTheme === 'light';
 
   return (
     <button
-      className="relative w-9 h-9 flex items-center justify-center rounded-full text-[var(--color-ivory)] hover:text-[var(--color-gold)] transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)]"
+      className={`relative w-9 h-9 flex items-center justify-center rounded-full hover:text-[var(--color-gold)] transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] ${scrolled ? 'text-[var(--color-ivory)]' : 'text-[#F0EDE6]'}`}
       onClick={toggleTheme}
       aria-label={isLight ? 'Switch to dark mode' : 'Switch to light mode'}
       role="switch"

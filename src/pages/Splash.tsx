@@ -1,5 +1,7 @@
 ﻿import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import gsap from 'gsap';
 import { siteImages } from '../assets/siteImages';
 
@@ -109,14 +111,21 @@ export default function Splash() {
       </div>
 
       {/* Social Icons Top Right */}
-      <div className="absolute top-8 right-[5vw] z-10 flex gap-4">
-        {['IG', 'X', 'LI'].map((social) => (
+      <div className="absolute top-8 right-[5vw] z-10 flex gap-3">
+        {[
+          { icon: FaInstagram, href: '#', label: 'Instagram' },
+          { icon: FaXTwitter, href: '#', label: 'X' },
+          { icon: FaLinkedinIn, href: '#', label: 'LinkedIn' },
+        ].map(({ icon: Icon, href, label }) => (
           <a
-            key={social}
-            href="#"
-            className="font-mono text-[10px] text-[var(--color-silver)] hover:text-[var(--color-gold)] transition-colors"
+            key={label}
+            href={href}
+            aria-label={label}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--color-silver)] hover:text-[var(--color-gold)] transition-colors duration-300"
           >
-            {social}
+            <Icon size={16} />
           </a>
         ))}
       </div>

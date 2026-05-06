@@ -1,5 +1,7 @@
 ﻿import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
+import { FaInstagram, FaYoutube, FaFacebookF, FaLinkedinIn, FaVimeoV } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Footer() {
   return (
@@ -32,14 +34,24 @@ export default function Footer() {
           {/* Social */}
           <div>
             <h4 className="font-nav text-sm text-[var(--color-gold)] mb-6">SOCIAL</h4>
-            <div className="flex flex-col gap-3">
-              {['Vimeo', 'Instagram', 'YouTube', 'X (Twitter)', 'LinkedIn', 'Facebook'].map((social) => (
+            <div className="flex gap-4">
+              {[
+                { icon: FaInstagram, href: '#', label: 'Instagram' },
+                { icon: FaYoutube, href: '#', label: 'YouTube' },
+                { icon: FaXTwitter, href: '#', label: 'X' },
+                { icon: FaLinkedinIn, href: '#', label: 'LinkedIn' },
+                { icon: FaFacebookF, href: '#', label: 'Facebook' },
+                { icon: FaVimeoV, href: '#', label: 'Vimeo' },
+              ].map(({ icon: Icon, href, label }) => (
                 <a
-                  key={social}
-                  href="#"
-                  className="font-body text-sm text-[var(--color-silver)] hover:text-[var(--color-gold)] transition-colors duration-200 flex items-center gap-1"
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 flex items-center justify-center rounded-full border border-[var(--color-steel)] text-[var(--color-silver)] hover:text-[var(--color-gold)] hover:border-[var(--color-gold)] transition-all duration-300"
                 >
-                  {social} <ArrowUpRight size={12} />
+                  <Icon size={18} />
                 </a>
               ))}
             </div>
