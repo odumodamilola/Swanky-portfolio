@@ -52,8 +52,8 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-void)] via-[var(--gradient-hero-from)] to-transparent" />
         <div className="relative z-10 flex flex-col justify-end h-full px-[5vw] pb-20">
           <ScrollReveal>
-            <p className="font-mono text-[10px] text-[var(--color-gold)] tracking-[0.15em] mb-4">ABOUT</p>
-            <h1 className="font-display italic text-[12vw] md:text-[10vw] text-[var(--color-ivory)] leading-none">
+            <p className="font-mono text-[10px] text-[#C9A84C] tracking-[0.15em] mb-4">ABOUT</p>
+            <h1 className="font-display italic text-[12vw] md:text-[10vw] text-[#F0EDE6] leading-none">
               OLALEKAN<br />SWANKY ISIAKA
             </h1>
           </ScrollReveal>
@@ -159,7 +159,7 @@ export default function About() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
               {['Netflix', 'AMVCA Nominee', 'Wazobia TV', 'NTA Abuja', 'Lagos Television', 'Africa Magic', 'BBNaija', 'Lagos Art Party'].map((logo) => (
                 <div key={logo} className="text-center py-6">
-                  <p className="font-nav text-xl md:text-2xl text-[var(--color-ash)] tracking-[0.1em]">{logo}</p>
+                  <p className="font-nav text-xl md:text-2xl text-[var(--color-silver)] tracking-[0.1em]">{logo}</p>
                 </div>
               ))}
             </div>

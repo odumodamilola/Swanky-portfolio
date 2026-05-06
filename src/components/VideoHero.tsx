@@ -8,7 +8,7 @@ export default function VideoHero() {
       </video>
       <div className="absolute inset-0 bg-gradient-to-b from-[var(--gradient-hero-from)] via-[var(--gradient-hero-via)] to-[var(--color-void)]" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-[5vw]">
-        <h1 className="font-display italic text-[10vw] md:text-[8vw] text-[var(--color-ivory)] text-center leading-none">
+        <h1 className="font-display italic text-[10vw] md:text-[8vw] text-[#F0EDE6] text-center leading-none">
           OLALEKAN ISIAKA
         </h1>
       </div>

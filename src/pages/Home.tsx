@@ -48,22 +48,22 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[var(--gradient-hero-from)] via-[var(--gradient-hero-via)] to-[var(--color-void)]" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-[5vw]">
-          <h1 className="font-display italic text-[10vw] md:text-[8vw] text-[var(--color-ivory)] text-center leading-none">
+          <h1 className="font-display italic text-[10vw] md:text-[8vw] text-[#F0EDE6] text-center leading-none">
             Olalekan Swanky Isiaka
           </h1>
-          <p className="font-nav text-xs md:text-sm text-[var(--color-gold)] tracking-[0.5em] mt-4 md:mt-6">
+          <p className="font-nav text-xs md:text-sm text-[#C9A84C] tracking-[0.5em] mt-4 md:mt-6">
             VISUAL ARTIST &middot; PRODUCTION DESIGNER &middot; NOLLYWOOD ART DIRECTOR
           </p>
           <div className="flex gap-6 mt-10">
             <Link
               to="/work"
-              className="font-nav text-sm tracking-[0.2em] px-8 py-3 border border-[var(--color-ivory)] text-[var(--color-ivory)] hover:bg-[var(--color-ivory)] hover:text-[var(--color-void)] transition-all duration-300"
+              className="font-nav text-sm tracking-[0.2em] px-8 py-3 border border-[#F0EDE6] text-[#F0EDE6] hover:bg-[#F0EDE6] hover:text-[#080808] transition-all duration-300"
             >
               VIEW WORK
             </Link>
             <Link
               to="/contact"
-              className="font-nav text-sm tracking-[0.2em] px-8 py-3 bg-[var(--color-gold)] text-[var(--color-void)] hover:bg-[var(--color-amber)] transition-all duration-300"
+              className="font-nav text-sm tracking-[0.2em] px-8 py-3 bg-[#C9A84C] text-[#080808] hover:bg-[#E8821A] transition-all duration-300"
             >
               HIRE OLALEKAN
             </Link>
@@ -139,12 +139,12 @@ export default function Home() {
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--gradient-card-from)] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                    <p className="font-mono text-[10px] text-[var(--color-gold)] mb-1">{project.category} &mdash; {project.year}</p>
-                    <h4 className="font-display italic text-2xl text-[var(--color-ivory)]">{project.title}</h4>
-                    <p className="font-body text-sm text-[var(--color-chalk)] mt-1">{project.client}</p>
+                    <p className="font-mono text-[10px] text-[#C9A84C] mb-1">{project.category} &mdash; {project.year}</p>
+                    <h4 className="font-display italic text-2xl text-[#F0EDE6]">{project.title}</h4>
+                    <p className="font-body text-sm text-[#D4D4D4] mt-1">{project.client}</p>
                   </div>
-                  <div className="absolute top-4 right-4 w-10 h-10 rounded-full border border-[var(--color-ivory)] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Play size={14} className="text-[var(--color-ivory)] ml-0.5" />
+                  <div className="absolute top-4 right-4 w-10 h-10 rounded-full border border-[#F0EDE6] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <Play size={14} className="text-[#F0EDE6] ml-0.5" />
                   </div>
                 </div>
               </ScrollReveal>

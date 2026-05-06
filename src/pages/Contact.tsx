@@ -55,21 +55,21 @@ export default function Contact() {
                   </p>
                 </div>
                 <div className="inline-flex items-center gap-2 bg-[var(--color-graphite)] px-4 py-2 border border-[var(--color-steel)]">
-                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-[var(--color-gold)] animate-pulse" />
                   <p className="font-mono text-[10px] text-[var(--color-chalk)]">Typically responds within 24 hours</p>
                 </div>
 
                 {/* Simple UK Map Indicator */}
                 <div className="mt-12 hidden lg:block">
-                  <svg viewBox="0 0 200 120" className="w-full max-w-[280px] opacity-30">
+                  <svg viewBox="0 0 200 120" className="w-full max-w-[280px] opacity-30 text-[var(--color-gold)]">
                     <path
                       d="M95,20 L105,18 L115,22 L120,30 L118,40 L122,50 L120,60 L115,70 L110,75 L105,80 L100,78 L95,82 L90,78 L85,72 L80,65 L78,55 L80,45 L85,35 L90,28 Z"
                       fill="none"
-                      stroke="#C9A84C"
+                      stroke="currentColor"
                       strokeWidth="1"
                     />
-                    <circle cx="100" cy="50" r="3" fill="#C9A84C" />
-                    <text x="108" y="54" fill="#C9A84C" fontSize="8" fontFamily="JetBrains Mono">UK</text>
+                    <circle cx="100" cy="50" r="3" fill="currentColor" />
+                    <text x="108" y="54" fill="currentColor" fontSize="8" fontFamily="JetBrains Mono">UK</text>
                   </svg>
                 </div>
               </ScrollReveal>
@@ -135,7 +135,7 @@ export default function Contact() {
                           name="projectType"
                           value={formData.projectType}
                           onChange={handleChange}
-                          className="w-full bg-[var(--color-graphite)] border border-[var(--color-steel)] px-4 py-3 font-body text-[var(--color-chalk)] focus:border-[var(--color-gold)] focus:outline-none transition-colors appearance-none"
+                          className="w-full bg-[var(--color-graphite)] border border-[var(--color-steel)] px-4 py-3 font-body text-[var(--color-chalk)] focus:border-[var(--color-gold)] focus:outline-none transition-colors appearance-none [&>option]:bg-[var(--color-graphite)] [&>option]:text-[var(--color-chalk)]"
                         >
                           <option value="">Select type</option>
                           <option value="film-art-direction">Film Art Direction</option>
@@ -156,7 +156,7 @@ export default function Contact() {
                           name="budget"
                           value={formData.budget}
                           onChange={handleChange}
-                          className="w-full bg-[var(--color-graphite)] border border-[var(--color-steel)] px-4 py-3 font-body text-[var(--color-chalk)] focus:border-[var(--color-gold)] focus:outline-none transition-colors appearance-none"
+                          className="w-full bg-[var(--color-graphite)] border border-[var(--color-steel)] px-4 py-3 font-body text-[var(--color-chalk)] focus:border-[var(--color-gold)] focus:outline-none transition-colors appearance-none [&>option]:bg-[var(--color-graphite)] [&>option]:text-[var(--color-chalk)]"
                         >
                           <option value="">Select range</option>
                           <option value="under-10k">Under Â£10,000</option>

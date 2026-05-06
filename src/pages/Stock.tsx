@@ -35,10 +35,10 @@ export default function Stock() {
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-void)] via-[var(--gradient-vignette)] to-[var(--gradient-hero-from)]" />
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-[5vw] text-center">
           <ScrollReveal>
-            <h1 className="font-display italic text-6xl md:text-8xl text-[var(--color-ivory)] mb-4">
+            <h1 className="font-display italic text-6xl md:text-8xl text-[#F0EDE6] mb-4">
               Art Prints
             </h1>
-            <p className="font-nav text-sm text-[var(--color-gold)] tracking-[0.5em]">
+            <p className="font-nav text-sm text-[#C9A84C] tracking-[0.5em]">
               LIMITED-EDITION GICLÉE PRINTS AVAILABLE
             </p>
           </ScrollReveal>
@@ -80,8 +80,8 @@ export default function Stock() {
                     />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--gradient-card-from)] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-5">
-                    <h4 className="font-display italic text-xl text-[var(--color-ivory)]">{clip.title}</h4>
-                    <p className="font-mono text-[10px] text-[var(--color-gold)] mt-1">{clip.category}</p>
+                    <h4 className="font-display italic text-xl text-[#F0EDE6]">{clip.title}</h4>
+                    <p className="font-mono text-[10px] text-[#C9A84C] mt-1">{clip.category}</p>
                   </div>
                   <div className="absolute top-3 right-3 flex gap-2">
                     <span className="font-mono text-[10px] bg-[var(--color-void)]/80 text-[var(--color-chalk)] px-2 py-1">

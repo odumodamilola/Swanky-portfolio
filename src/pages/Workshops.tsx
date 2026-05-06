@@ -165,14 +165,14 @@ export default function Workshops() {
               <div className="flex justify-center gap-4 mt-8">
                 <button
                   onClick={() => setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-                  className="w-10 h-10 rounded-full border border-[var(--color-steel)] flex items-center justify-center hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-colors"
+                  className="w-10 h-10 rounded-full border border-[var(--color-steel)] text-[var(--color-silver)] flex items-center justify-center hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-colors"
                   data-cursor-hover
                 >
                   <ChevronLeft size={18} />
                 </button>
                 <button
                   onClick={() => setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)}
-                  className="w-10 h-10 rounded-full border border-[var(--color-steel)] flex items-center justify-center hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-colors"
+                  className="w-10 h-10 rounded-full border border-[var(--color-steel)] text-[var(--color-silver)] flex items-center justify-center hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-colors"
                   data-cursor-hover
                 >
                   <ChevronRight size={18} />

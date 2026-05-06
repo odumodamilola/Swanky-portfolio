@@ -39,16 +39,16 @@ export default function Blog() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-void)] via-[var(--gradient-hero-via)] to-transparent" />
               <div className="absolute bottom-0 left-0 p-8 md:p-12 max-w-3xl">
-                <p className="font-mono text-[10px] text-[var(--color-gold)] tracking-[0.15em] mb-3">
+                <p className="font-mono text-[10px] text-[#C9A84C] tracking-[0.15em] mb-3">
                   FEATURED &mdash; {featuredPost.category}
                 </p>
-                <h1 className="font-display italic text-3xl md:text-5xl text-[var(--color-ivory)] mb-4 group-hover:text-[var(--color-gold)] transition-colors">
+                <h1 className="font-display italic text-3xl md:text-5xl text-[#F0EDE6] mb-4 group-hover:text-[#C9A84C] transition-colors">
                   {featuredPost.title}
                 </h1>
-                <p className="font-body text-[var(--color-chalk)] mb-4 max-w-xl hidden md:block">
+                <p className="font-body text-[#D4D4D4] mb-4 max-w-xl hidden md:block">
                   {featuredPost.excerpt}
                 </p>
-                <p className="font-mono text-[10px] text-[var(--color-silver)]">
+                <p className="font-mono text-[10px] text-[#8A8A8A]">
                   {featuredPost.date} &middot; {featuredPost.readTime}
                 </p>
               </div>

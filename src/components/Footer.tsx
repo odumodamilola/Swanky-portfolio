@@ -59,14 +59,14 @@ export default function Footer() {
         </div>
 
         <div className="mt-20 pt-8 border-t border-[var(--color-steel)] flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-mono text-[var(--color-ash)]">
+          <p className="font-mono text-[var(--color-silver)]">
             &copy; Olalekan Swanky Isiaka 2025. All Rights Reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="#" className="font-mono text-[var(--color-ash)] hover:text-[var(--color-gold)] transition-colors">
+            <Link to="#" className="font-mono text-[var(--color-silver)] hover:text-[var(--color-gold)] transition-colors">
               Privacy Policy
             </Link>
-            <Link to="#" className="font-mono text-[var(--color-ash)] hover:text-[var(--color-gold)] transition-colors">
+            <Link to="#" className="font-mono text-[var(--color-silver)] hover:text-[var(--color-gold)] transition-colors">
               Terms of Use
             </Link>
           </div>

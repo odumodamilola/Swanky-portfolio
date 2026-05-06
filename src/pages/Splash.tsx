@@ -84,13 +84,13 @@ export default function Splash() {
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-[5vw]">
         <h1
           ref={nameRef}
-          className="font-display italic text-[14vw] md:text-[12vw] text-[var(--color-ivory)] text-center leading-none tracking-tight"
+          className="font-display italic text-[14vw] md:text-[12vw] text-[#F0EDE6] text-center leading-none tracking-tight"
         >
           Olalekan Swanky Isiaka
         </h1>
         <p
           ref={subtitleRef}
-          className="font-nav text-sm md:text-base text-[var(--color-gold)] tracking-[0.5em] mt-6 md:mt-8"
+          className="font-nav text-sm md:text-base text-[#C9A84C] tracking-[0.5em] mt-6 md:mt-8"
         >
           VISUAL ARTIST &middot; PRODUCTION DESIGNER &middot; NOLLYWOOD ART DIRECTOR
         </p>
@@ -100,13 +100,13 @@ export default function Splash() {
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-4">
         <Link
           to="/home"
-          className="font-nav text-xs text-[var(--color-silver)] hover:text-[var(--color-gold)] transition-colors tracking-[0.3em]"
+          className="font-nav text-xs text-[#8A8A8A] hover:text-[#C9A84C] transition-colors tracking-[0.3em]"
         >
           ENTER SITE
         </Link>
         <div
           ref={scrollRef}
-          className="w-[1px] h-12 bg-[var(--color-silver)]"
+          className="w-[1px] h-12 bg-[#8A8A8A]"
         />
       </div>
 
@@ -123,7 +123,7 @@ export default function Splash() {
             aria-label={label}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[var(--color-silver)] hover:text-[var(--color-gold)] transition-colors duration-300"
+            className="text-[#8A8A8A] hover:text-[#C9A84C] transition-colors duration-300"
           >
             <Icon size={16} />
           </a>
