@@ -29,7 +29,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
         <Route path="/workshops" element={<Gate flag={PUBLISHED_ROUTES.workshops}><Workshops /></Gate>} />
-        <Route path="/stock" element={<Stock />} />
+        <Route path="/stock" element={<Gate flag={PUBLISHED_ROUTES.stock}><Stock /></Gate>} />
         <Route path="/rates" element={<Gate flag={PUBLISHED_ROUTES.rates}><Rates /></Gate>} />
         <Route path="/presenting" element={<Gate flag={PUBLISHED_ROUTES.presenting}><Presenting /></Gate>} />
         <Route path="/blog" element={<Gate flag={PUBLISHED_ROUTES.blog}><Blog /></Gate>} />

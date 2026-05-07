@@ -15,7 +15,7 @@ export const PUBLISHED_ROUTES = {
   about: true,
   work: true,
   workshops: false,
-  stock: true,
+  stock: false,
   rates: false,
   presenting: false,
   blog: false,

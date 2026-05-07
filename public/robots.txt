@@ -4,5 +4,6 @@ Allow: /
 # Unpublished routes — temporarily disallowed
 Disallow: /blog
 Disallow: /workshops
+Disallow: /stock
 Disallow: /rates
 Disallow: /presenting

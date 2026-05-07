@@ -7,7 +7,8 @@ export const projects = [
     category: "Film",
     year: "2023",
     client: "Nollywood",
-    image: siteImages.projects.workSurf,
+    image: "https://img.youtube.com/vi/nrSx7PkBN6o/maxresdefault.jpg",
+    video: "https://www.youtube.com/embed/nrSx7PkBN6o",
     description: "Art direction for one of the highest-grossing Nollywood films of all time. Delivered culturally authentic, narrative-driven environments across multiple locations.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Funke Akindele", client: "Scene One Productions" },
     specs: { camera: "Full Set Design & Art Direction", lenses: "Custom Build & Dress", location: "Lagos, Nigeria", year: "2023" }
@@ -18,7 +19,8 @@ export const projects = [
     category: "Film",
     year: "2024",
     client: "Nollywood",
-    image: siteImages.projects.workFishing,
+    image: "https://img.youtube.com/vi/x4JIoP5FlhU/maxresdefault.jpg",
+    video: "https://www.youtube.com/embed/x4JIoP5FlhU",
     description: "Production design and art direction for the blockbuster sequel. Created vibrant, story-driven sets that balanced comedy with cultural richness.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Funke Akindele", client: "Scene One Productions" },
     specs: { camera: "Set Design & Art Direction", lenses: "Custom Fabrication & Styling", location: "Lagos, Nigeria", year: "2024" }
@@ -26,10 +28,11 @@ export const projects = [
   {
     id: 3,
     title: "Shanty Town",
-    category: "Streaming",
+    category: "Film",
     year: "2023",
     client: "Netflix",
-    image: siteImages.projects.workCommercial,
+    image: "https://img.youtube.com/vi/g3-TbsMEVPw/maxresdefault.jpg",
+    video: "https://www.youtube.com/embed/g3-TbsMEVPw",
     description: "Art direction for the Netflix original series. Built gritty, immersive environments that brought the story's underworld to life with mood-driven colour and texture.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Dimeji Ajibola", client: "Netflix" },
     specs: { camera: "Set Construction & Scenic Art", lenses: "Mood-Driven Colour Direction", location: "Lagos, Nigeria", year: "2023" }
@@ -37,24 +40,48 @@ export const projects = [
   {
     id: 4,
     title: "The Party",
-    category: "Streaming",
-    year: "2024",
+    category: "Film",
+    year: "2025",
     client: "Netflix",
-    image: siteImages.projects.workArctic,
+    image: "https://img.youtube.com/vi/rFXvEHoebVk/maxresdefault.jpg",
+    video: "https://www.youtube.com/embed/rFXvEHoebVk",
     description: "Production design for the Netflix original. Crafted visually cohesive worlds that enhanced the narrative through detailed set construction and cultural authenticity.",
-    credits: { dp: "Olalekan Swanky Isiaka", director: "Various", client: "Netflix" },
-    specs: { camera: "Full Production Design", lenses: "Set Build & Art Direction", location: "Lagos, Nigeria", year: "2024" }
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Kunle Afolayan", client: "Netflix" },
+    specs: { camera: "Full Production Design", lenses: "Set Build & Art Direction", location: "Lagos, Nigeria", year: "2025" }
   },
   {
     id: 5,
     title: "Big Brother Naija Reunion",
-    category: "Broadcast",
+    category: "Film",
     year: "2025",
     client: "Multichoice",
-    image: siteImages.projects.workMusic,
+    image: siteImages.projects.bbnaija,
+    video: "https://www.youtube.com/embed/Zk6yahQMyDw",
     description: "Designed and built the full reunion set for Africa's biggest reality TV franchise. A landmark broadcast design combining bold colour, dynamic staging, and camera-ready architecture.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Production Team", client: "Multichoice / Africa Magic" },
     specs: { camera: "Studio Set Design & Build", lenses: "LED Integration & Scenic Art", location: "Lagos, Nigeria", year: "2025" }
+  },
+  {
+    id: 25,
+    title: "Gudu Morning Naija",
+    category: "Film",
+    year: "2019",
+    client: "NTA Abuja",
+    image: siteImages.projects.workInterview,
+    description: "Designed and built the studio set for NTA Abuja's flagship morning show. A broadcast design combining warm tones, functional staging, and a camera-ready environment.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "NTA Production", client: "NTA Abuja" },
+    specs: { camera: "Studio Set Design", lenses: "Broadcast Environment", location: "Abuja, Nigeria", year: "2019" }
+  },
+  {
+    id: 26,
+    title: "Wazobia TV Studio",
+    category: "Film",
+    year: "2020",
+    client: "Wazobia TV",
+    image: siteImages.projects.workStage,
+    description: "Pioneer set designer for the Wazobia TV broadcast studio. Designed the flagship studio environment that became the visual identity of the network.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Wazobia Production", client: "Wazobia TV" },
+    specs: { camera: "Full Studio Design", lenses: "LED & Scenic Art", location: "Lagos, Nigeria", year: "2020" }
   },
   {
     id: 6,
@@ -62,10 +89,208 @@ export const projects = [
     category: "Exhibition",
     year: "2025",
     client: "Solo Exhibition",
-    image: siteImages.projects.workPortrait,
+    image: siteImages.exhibition.galleryCrowd,
     description: "Debut solo art exhibition held at Victoria Garden City, Lekki, Lagos. A faith-inspired collection exploring healing, restoration, and spirituality through expressive colour and textured compositions.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Lagos Art Party" },
     specs: { camera: "Painting & Mixed Media", lenses: "Acrylic, Oil & Texture", location: "Lekki, Lagos", year: "2025" }
+  },
+  {
+    id: 7,
+    title: "Restoration I",
+    category: "Art",
+    year: "2024",
+    client: "Original Painting",
+    image: siteImages.art.forestPath,
+    description: "A contemplative oil painting depicting a solitary path through a dense forest — exploring themes of spiritual journey, restoration, and finding peace in stillness.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Private Collection" },
+    specs: { camera: "Oil on Canvas", lenses: "120 x 90cm", location: "Lagos Studio", year: "2024" }
+  },
+  {
+    id: 8,
+    title: "Dawn of Grace",
+    category: "Art",
+    year: "2024",
+    client: "Original Painting",
+    image: siteImages.art.doveSunrise,
+    description: "A dove ascending into golden sunrise light — symbolising hope, new beginnings, and divine grace. Rendered in rich acrylic with textured brushwork.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Private Collection" },
+    specs: { camera: "Acrylic & Texture", lenses: "100 x 80cm", location: "Lagos Studio", year: "2024" }
+  },
+  {
+    id: 9,
+    title: "The Lion & The Lamb",
+    category: "Art",
+    year: "2025",
+    client: "Original Painting",
+    image: siteImages.art.lionLamb,
+    description: "A powerful framed composition depicting the lion and the lamb together — exploring duality, strength, and gentleness in faith-inspired visual storytelling.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal Collection" },
+    specs: { camera: "Mixed Media", lenses: "150 x 100cm", location: "Lagos Studio", year: "2025" }
+  },
+  {
+    id: 10,
+    title: "Intercessors",
+    category: "Art",
+    year: "2025",
+    client: "Original Painting",
+    image: siteImages.art.prayingWomen,
+    description: "Two women in deep prayer — a bold, expressive composition celebrating faith, community, and the power of intercession. Vivid colour and dynamic brushstrokes.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal Collection" },
+    specs: { camera: "Acrylic on Canvas", lenses: "120 x 120cm", location: "Lagos Studio", year: "2025" }
+  },
+  {
+    id: 11,
+    title: "Shepherd's Watch",
+    category: "Art",
+    year: "2024",
+    client: "Original Painting",
+    image: siteImages.art.sheepWater,
+    description: "A flock guided by still waters — a pastoral, faith-driven piece exploring the theme of divine guidance and provision through soft colour and expansive composition.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Private Collection" },
+    specs: { camera: "Oil on Canvas", lenses: "180 x 120cm", location: "Lagos Studio", year: "2024" }
+  },
+  {
+    id: 12,
+    title: "Walking on Water",
+    category: "Art",
+    year: "2025",
+    client: "Original Painting",
+    image: siteImages.art.walkingOnWater,
+    description: "A figure stepping boldly onto turbulent water — a statement piece on faith beyond reason. Dramatic composition with expressive colour and movement.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal Collection" },
+    specs: { camera: "Acrylic & Gold Leaf", lenses: "150 x 120cm", location: "Lagos Studio", year: "2025" }
+  },
+  {
+    id: 13,
+    title: "Spiritual Bloom",
+    category: "Art",
+    year: "2024",
+    client: "Original Painting",
+    image: siteImages.art.birdsFlowers,
+    description: "Birds amidst vibrant floral growth — celebrating creation, beauty, and the interconnectedness of nature and spirit through rich layered colour.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Private Collection" },
+    specs: { camera: "Mixed Media", lenses: "90 x 60cm", location: "Lagos Studio", year: "2024" }
+  },
+  {
+    id: 14,
+    title: "The Roar Within",
+    category: "Art",
+    year: "2025",
+    client: "Original Painting",
+    image: siteImages.art.lionDetail,
+    description: "An intimate close-up study of a lion's face — bold, textured brushwork captures raw power and quiet authority. A meditation on inner strength.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal Collection" },
+    specs: { camera: "Oil on Canvas", lenses: "100 x 100cm", location: "Lagos Studio", year: "2025" }
+  },
+  {
+    id: 15,
+    title: "Warmth of Home",
+    category: "Art",
+    year: "2024",
+    client: "Original Painting",
+    image: siteImages.art.framedWarm,
+    description: "A warm figurative composition evoking nostalgia, family, and belonging. Soft amber tones and gentle brushwork create an intimate, inviting atmosphere.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Private Collection" },
+    specs: { camera: "Acrylic on Canvas", lenses: "80 x 60cm", location: "Lagos Studio", year: "2024" }
+  },
+  {
+    id: 16,
+    title: "Gallery Night — Hues That Heal",
+    category: "Exhibition",
+    year: "2025",
+    client: "Solo Exhibition",
+    image: siteImages.exhibition.galleryVisitors,
+    description: "Opening night at the Hues That Heal exhibition. Guests engaging with the collection in an intimate gallery setting — art meeting community.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Lagos Art Party" },
+    specs: { camera: "Exhibition Curation", lenses: "Gallery Installation", location: "VGC, Lekki, Lagos", year: "2025" }
+  },
+  {
+    id: 17,
+    title: "Outdoor Gallery Display",
+    category: "Exhibition",
+    year: "2025",
+    client: "Solo Exhibition",
+    image: siteImages.exhibition.galleryOutdoor,
+    description: "An outdoor extension of the Hues That Heal exhibition — paintings displayed in natural light, bridging indoor gallery formality with open-air accessibility.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Lagos Art Party" },
+    specs: { camera: "Exhibition Design", lenses: "Outdoor Installation", location: "VGC, Lekki, Lagos", year: "2025" }
+  },
+  {
+    id: 18,
+    title: "Prayer in Paint",
+    category: "Exhibition",
+    year: "2025",
+    client: "Solo Exhibition",
+    image: siteImages.exhibition.prayingWomanExhib,
+    description: "A visitor contemplates a large-scale prayer painting — capturing the emotional resonance between artwork and viewer at the Hues That Heal show.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Lagos Art Party" },
+    specs: { camera: "Exhibition Documentation", lenses: "Gallery Moment", location: "VGC, Lekki, Lagos", year: "2025" }
+  },
+  {
+    id: 19,
+    title: "Abstract Identity",
+    category: "Exhibition",
+    year: "2025",
+    client: "Solo Exhibition",
+    image: siteImages.exhibition.abstractFace,
+    description: "An abstract face composition displayed at exhibition — exploring identity, expression, and the boundary between figuration and abstraction.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Lagos Art Party" },
+    specs: { camera: "Exhibition Piece", lenses: "Mixed Media on Canvas", location: "VGC, Lekki, Lagos", year: "2025" }
+  },
+  {
+    id: 20,
+    title: "The Artist's Studio",
+    category: "Exhibition",
+    year: "2025",
+    client: "Solo Exhibition",
+    image: siteImages.exhibition.artistArmchair,
+    description: "Olalekan Swanky Isiaka surrounded by his works in the studio — a portrait of the creative environment where faith-inspired art is born.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Personal Documentation" },
+    specs: { camera: "Studio Portrait", lenses: "Environmental", location: "Lagos Studio", year: "2025" }
+  },
+  {
+    id: 21,
+    title: "Behind the Canvas",
+    category: "Exhibition",
+    year: "2025",
+    client: "Solo Exhibition",
+    image: siteImages.exhibition.artistWithPainting,
+    description: "The artist stands alongside a finished work — bridging creator and creation, inviting viewers into the story behind each piece.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Personal Documentation" },
+    specs: { camera: "Artist Portrait", lenses: "With Artwork", location: "Lagos Studio", year: "2025" }
+  },
+  {
+    id: 22,
+    title: "Live Painting Session",
+    category: "Exhibition",
+    year: "2025",
+    client: "Solo Exhibition",
+    image: siteImages.exhibition.artistPaintingAction,
+    description: "A live painting demonstration at the exhibition opening — showing the raw creative process and technique behind each work in real time.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Lagos Art Party" },
+    specs: { camera: "Live Art", lenses: "Process Documentation", location: "VGC, Lekki, Lagos", year: "2025" }
+  },
+  {
+    id: 23,
+    title: "Gallery Moments",
+    category: "Exhibition",
+    year: "2025",
+    client: "Solo Exhibition",
+    image: siteImages.exhibition.galleryPhoto,
+    description: "Guests capturing their favourite pieces at the Hues That Heal exhibition — art creating conversation and connection.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Lagos Art Party" },
+    specs: { camera: "Exhibition Documentation", lenses: "Guest Interactions", location: "VGC, Lekki, Lagos", year: "2025" }
+  },
+  {
+    id: 24,
+    title: "Opening Night Crowd",
+    category: "Exhibition",
+    year: "2025",
+    client: "Solo Exhibition",
+    image: siteImages.exhibition.galleryCrowdView,
+    description: "The crowd gathers at the opening night of Hues That Heal — a vibrant celebration of art, faith, and community in Lagos.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Lagos Art Party" },
+    specs: { camera: "Exhibition Opening", lenses: "Crowd Documentation", location: "VGC, Lekki, Lagos", year: "2025" }
   }
 ];
 
@@ -141,12 +366,16 @@ export const workshopDates = [
 ];
 
 export const stockClips = [
-  { id: 1, title: "Restoration I", category: "Paintings", duration: "120x90cm", resolution: "Oil on Canvas", image: siteImages.stock.nature },
-  { id: 2, title: "Dawn of Grace", category: "Paintings", duration: "100x80cm", resolution: "Acrylic & Texture", image: siteImages.stock.ocean },
-  { id: 3, title: "Healing Waters", category: "Paintings", duration: "150x100cm", resolution: "Mixed Media", image: siteImages.stock.travel },
-  { id: 4, title: "Faith & Colour", category: "Paintings", duration: "90x60cm", resolution: "Oil on Canvas", image: siteImages.stock.urban },
-  { id: 5, title: "Spiritual Bloom", category: "Paintings", duration: "120x120cm", resolution: "Acrylic & Gold Leaf", image: siteImages.stock.humanStories },
-  { id: 6, title: "The Shepherd", category: "Paintings", duration: "180x120cm", resolution: "Mixed Media", image: siteImages.stock.aerial }
+  { id: 1, title: "Restoration I", category: "Paintings", duration: "120x90cm", resolution: "Oil on Canvas", image: siteImages.art.forestPath },
+  { id: 2, title: "Dawn of Grace", category: "Paintings", duration: "100x80cm", resolution: "Acrylic & Texture", image: siteImages.art.doveSunrise },
+  { id: 3, title: "The Lion & The Lamb", category: "Paintings", duration: "150x100cm", resolution: "Mixed Media", image: siteImages.art.lionLamb },
+  { id: 4, title: "Spiritual Bloom", category: "Paintings", duration: "90x60cm", resolution: "Mixed Media", image: siteImages.art.birdsFlowers },
+  { id: 5, title: "Intercessors", category: "Paintings", duration: "120x120cm", resolution: "Acrylic on Canvas", image: siteImages.art.prayingWomen },
+  { id: 6, title: "Shepherd's Watch", category: "Paintings", duration: "180x120cm", resolution: "Oil on Canvas", image: siteImages.art.sheepWater },
+  { id: 7, title: "Walking on Water", category: "Paintings", duration: "150x120cm", resolution: "Acrylic & Gold Leaf", image: siteImages.art.walkingOnWater },
+  { id: 8, title: "The Roar Within", category: "Paintings", duration: "100x100cm", resolution: "Oil on Canvas", image: siteImages.art.lionDetail },
+  { id: 9, title: "Warmth of Home", category: "Paintings", duration: "80x60cm", resolution: "Acrylic on Canvas", image: siteImages.art.framedWarm },
+  { id: 10, title: "Abstract Expression", category: "Paintings", duration: "100x80cm", resolution: "Mixed Media", image: siteImages.art.abstractHands }
 ];
 
 export const pastEvents = [

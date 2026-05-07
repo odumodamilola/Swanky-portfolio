@@ -55,24 +55,35 @@ export default function Work() {
     <div className="bg-[var(--color-void)] min-h-screen">
       <Navbar />
 
-      {/* Hero / Showreel Embed */}
-      <section className="pt-24 pb-16">
-        <div className="max-w-[1200px] mx-auto px-[5vw]">
+      {/* Hero — Background Video */}
+      <section className="relative h-[85vh] min-h-[500px] overflow-hidden flex items-center justify-center">
+        <video
+          src={siteImages.showreelVideo}
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster={siteImages.heroSplash}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-void)]/60 via-[var(--color-void)]/30 to-[var(--color-void)]" />
+        <div className="relative z-10 text-center px-[5vw] max-w-4xl">
           <ScrollReveal>
-            <div className="aspect-video bg-[var(--color-graphite)] relative overflow-hidden">
-              <video
-                src={siteImages.showreelVideo}
-                className="w-full h-full object-cover"
-                controls
-                playsInline
-                preload="metadata"
-                poster={siteImages.heroSplash}
-              />
-              <p className="absolute bottom-6 left-6 font-mono text-[10px] text-[var(--color-silver)] tracking-[0.15em] pointer-events-none">
-                Olalekan Swanky Isiaka PORTFOLIO 2024
-              </p>
-            </div>
+            <p className="font-mono text-[10px] md:text-xs text-[var(--color-gold)] tracking-[0.3em] mb-4">
+              SELECTED WORKS
+            </p>
+            <h1 className="font-display italic text-5xl sm:text-6xl md:text-8xl text-[var(--color-ivory)] leading-[0.95] mb-6">
+              Crafting Worlds,<br />Frame by Frame
+            </h1>
+            <p className="font-body text-sm md:text-base text-[var(--color-chalk)] max-w-lg mx-auto">
+              Art direction, production design &amp; visual storytelling across film, art, and exhibition.
+            </p>
           </ScrollReveal>
+        </div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-bounce">
+          <span className="font-mono text-[9px] text-[var(--color-silver)] tracking-[0.2em]">SCROLL</span>
+          <div className="w-px h-6 bg-[var(--color-gold)]/50" />
         </div>
       </section>
 
@@ -159,18 +170,30 @@ export default function Work() {
           </button>
 
           <div className="max-w-[1000px] w-full max-h-[90vh] overflow-y-auto">
-            <div className="aspect-video bg-[var(--color-graphite)] mb-8 relative">
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full border-2 border-[var(--color-ivory)] flex items-center justify-center">
-                  <Play size={24} className="text-[var(--color-ivory)] ml-0.5" />
-                </div>
-              </div>
+            <div className="aspect-video bg-[var(--color-graphite)] mb-8 relative overflow-hidden">
+              {selectedProject.video ? (
+                <iframe
+                  src={selectedProject.video}
+                  className="w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title={selectedProject.title}
+                />
+              ) : (
+                <>
+                  <img
+                    src={selectedProject.image}
+                    alt={selectedProject.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full border-2 border-[var(--color-ivory)] flex items-center justify-center">
+                      <Play size={24} className="text-[var(--color-ivory)] ml-0.5" />
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

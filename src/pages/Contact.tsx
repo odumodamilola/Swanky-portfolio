@@ -259,11 +259,11 @@ export default function Contact() {
                           className="w-full bg-[var(--color-graphite)] border border-[var(--color-steel)] px-4 py-3 font-body text-[var(--color-chalk)] focus:border-[var(--color-gold)] focus:outline-none transition-colors appearance-none [&>option]:bg-[var(--color-graphite)] [&>option]:text-[var(--color-chalk)]"
                         >
                           <option value="">Select range</option>
-                          <option value="Under £10,000">Under £10,000</option>
-                          <option value="£10,000 – £25,000">£10,000 – £25,000</option>
-                          <option value="£25,000 – £50,000">£25,000 – £50,000</option>
-                          <option value="£50,000 – £100,000">£50,000 – £100,000</option>
-                          <option value="Over £100,000">Over £100,000</option>
+                          <option value="Under ₦5,000,000">Under ₦5,000,000</option>
+                          <option value="₦5,000,000 – ₦15,000,000">₦5,000,000 – ₦15,000,000</option>
+                          <option value="₦15,000,000 – ₦30,000,000">₦15,000,000 – ₦30,000,000</option>
+                          <option value="₦30,000,000 – ₦50,000,000">₦30,000,000 – ₦50,000,000</option>
+                          <option value="Over ₦50,000,000">Over ₦50,000,000</option>
                           <option value="To be discussed">To be discussed</option>
                         </select>
                       </div>
