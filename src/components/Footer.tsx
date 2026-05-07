@@ -37,7 +37,7 @@ export default function Footer() {
             <h4 className="font-nav text-sm text-[var(--color-gold)] mb-6">SOCIAL</h4>
             <div className="flex gap-4">
               {[
-                { icon: FaInstagram, href: '#', label: 'Instagram' },
+                { icon: FaInstagram, href: 'https://www.instagram.com/lekanswanky', label: 'Instagram' },
                 { icon: FaYoutube, href: '#', label: 'YouTube' },
                 { icon: FaXTwitter, href: '#', label: 'X' },
                 { icon: FaLinkedinIn, href: '#', label: 'LinkedIn' },

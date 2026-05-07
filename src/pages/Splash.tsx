@@ -113,7 +113,7 @@ export default function Splash() {
       {/* Social Icons Top Right */}
       <div className="absolute top-8 right-[5vw] z-10 flex gap-3">
         {[
-          { icon: FaInstagram, href: '#', label: 'Instagram' },
+          { icon: FaInstagram, href: 'https://www.instagram.com/lekanswanky', label: 'Instagram' },
           { icon: FaXTwitter, href: '#', label: 'X' },
           { icon: FaLinkedinIn, href: '#', label: 'LinkedIn' },
         ].map(({ icon: Icon, href, label }) => (

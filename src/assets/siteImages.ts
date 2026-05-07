@@ -1,6 +1,6 @@
-﻿import heroSplash from './images/portraits/artist-portrait-stairs.jpg';
+﻿import heroSplash from './images/portraits/artist-portrait-armchair.jpg';
 import showreelVideo from './images/VID-20260216-WA0071.mp4';
-import heroAbout from './images/portraits/artist-portrait-armchair.jpg';
+import heroAbout from './images/portraits/artist-portrait-front-patterned.jpg';
 import heroWorkshops from './images/work/work-event-host-speaking.jpg';
 import homeAboutPortrait from './images/portraits/artist-portrait-serious.jpg';
 
