@@ -1,5 +1,4 @@
-﻿import { Routes, Route } from 'react-router-dom'
-import Splash from './pages/Splash'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Work from './pages/Work'
@@ -11,6 +10,12 @@ import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import CustomCursor from './components/CustomCursor'
 import FilmGrain from './components/FilmGrain'
+import { PUBLISHED_ROUTES } from './config/featureFlags'
+
+/** Renders the page component if the route is published, otherwise redirects to /home */
+function Gate({ flag, children }: { flag: boolean; children: React.ReactNode }) {
+  return flag ? <>{children}</> : <Navigate to="/home" replace />
+}
 
 export default function App() {
   return (
@@ -18,18 +23,27 @@ export default function App() {
       <CustomCursor />
       <FilmGrain />
       <Routes>
-        <Route path="/" element={<Splash />} />
+        {/* Root now renders Home directly */}
+        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
-        <Route path="/workshops" element={<Workshops />} />
+        <Route path="/workshops" element={<Gate flag={PUBLISHED_ROUTES.workshops}><Workshops /></Gate>} />
         <Route path="/stock" element={<Stock />} />
-        <Route path="/rates" element={<Rates />} />
-        <Route path="/presenting" element={<Presenting />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/rates" element={<Gate flag={PUBLISHED_ROUTES.rates}><Rates /></Gate>} />
+        <Route path="/presenting" element={<Gate flag={PUBLISHED_ROUTES.presenting}><Presenting /></Gate>} />
+        <Route path="/blog" element={<Gate flag={PUBLISHED_ROUTES.blog}><Blog /></Gate>} />
         <Route path="/contact" element={<Contact />} />
+        {/* Catch-all: redirect unknown routes to home */}
+        <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
     </>
   )
 }
+
+
+
+
+
+
 

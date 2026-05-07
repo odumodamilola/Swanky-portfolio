@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import ScrollReveal from '../components/ScrollReveal';
 import { siteImages } from '../assets/siteImages';
 import { testimonials, workshopDates } from '../data/siteData';
+import { PUBLISHED_ROUTES } from '../config/featureFlags';
 
 export default function Workshops() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -85,7 +86,7 @@ export default function Workshops() {
               {
                 title: "Large Venue Talk",
                 desc: "Keynotes, conference presentations, and industry talks. Ideal for inspiring large audiences with insights on production design and the Nigerian creative industry.",
-                link: "/presenting",
+                link: PUBLISHED_ROUTES.presenting ? "/presenting" : "/contact",
               },
               {
                 title: "Group Workshop",

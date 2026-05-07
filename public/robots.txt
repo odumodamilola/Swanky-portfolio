@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Unpublished routes — temporarily disallowed
+Disallow: /blog
+Disallow: /workshops
+Disallow: /rates
+Disallow: /presenting

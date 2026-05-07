@@ -148,7 +148,7 @@ export default function Stock() {
               I regularly create bespoke artwork for specific client needs. If you cannot find what you are looking for, let me know.
             </p>
             <a
-              href="mailto:olalekan@swankyi.com"
+              href="mailto:Justart1406@gmail.com"
               className="inline-block font-nav text-sm tracking-[0.2em] px-10 py-4 bg-[var(--color-gold)] text-[var(--color-void)] hover:bg-[var(--color-amber)] transition-all duration-300"
               data-cursor-hover
             >

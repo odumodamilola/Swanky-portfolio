@@ -2,8 +2,9 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import LightModeToggle from "./LightModeToggle";
+import { isRoutePublished } from "../config/featureFlags";
 
-const navLinks = [
+const allNavLinks = [
   { label: "HOME", path: "/home" },
   { label: "ABOUT", path: "/about" },
   { label: "WORK", path: "/work" },
@@ -14,6 +15,8 @@ const navLinks = [
   { label: "BLOG", path: "/blog" },
   { label: "CONTACT", path: "/contact" },
 ];
+
+const navLinks = allNavLinks.filter((link) => isRoutePublished(link.path));
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

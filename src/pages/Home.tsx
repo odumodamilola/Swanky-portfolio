@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import ScrollReveal from '../components/ScrollReveal';
 import { siteImages } from '../assets/siteImages';
 import { projects, blogPosts } from '../data/siteData';
+import { PUBLISHED_ROUTES } from '../config/featureFlags';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,20 +91,22 @@ export default function Home() {
                   VIEW WORK <ArrowRight size={16} />
                 </span>
               </Link>
-              <Link
-                to="/workshops"
-                className="group relative bg-[var(--color-graphite)] p-12 md:p-16 hover:bg-[var(--color-steel)] transition-colors duration-500"
-              >
-                <h3 className="font-display italic text-4xl md:text-5xl text-[var(--color-ivory)] mb-4">
-                  Masterclasses &amp; Mentorship
-                </h3>
-                <p className="font-body text-[var(--color-chalk)] max-w-md mb-8 leading-relaxed">
-                  Learn from years of real-world production experience. KAP Masterclass, Chase Media Masterclass, and bespoke mentorship for emerging creatives.
-                </p>
-                <span className="font-nav text-sm text-[var(--color-gold)] tracking-[0.2em] flex items-center gap-2 group-hover:gap-4 transition-all">
-                  LEARN MORE <ArrowRight size={16} />
-                </span>
-              </Link>
+              {PUBLISHED_ROUTES.workshops && (
+                <Link
+                  to="/workshops"
+                  className="group relative bg-[var(--color-graphite)] p-12 md:p-16 hover:bg-[var(--color-steel)] transition-colors duration-500"
+                >
+                  <h3 className="font-display italic text-4xl md:text-5xl text-[var(--color-ivory)] mb-4">
+                    Masterclasses &amp; Mentorship
+                  </h3>
+                  <p className="font-body text-[var(--color-chalk)] max-w-md mb-8 leading-relaxed">
+                    Learn from years of real-world production experience. KAP Masterclass, Chase Media Masterclass, and bespoke mentorship for emerging creatives.
+                  </p>
+                  <span className="font-nav text-sm text-[var(--color-gold)] tracking-[0.2em] flex items-center gap-2 group-hover:gap-4 transition-all">
+                    LEARN MORE <ArrowRight size={16} />
+                  </span>
+                </Link>
+              )}
             </div>
           </ScrollReveal>
         </div>
@@ -210,46 +213,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest Blog Posts */}
-      <section className="section-padding">
-        <div className="max-w-[1440px] mx-auto px-[5vw]">
-          <ScrollReveal>
-            <div className="flex items-end justify-between mb-12">
-              <h2 className="font-display italic text-5xl md:text-6xl text-[var(--color-ivory)]">
-                From the Blog
-              </h2>
-              <Link
-                to="/blog"
-                className="font-nav text-sm text-[var(--color-gold)] tracking-[0.2em] hidden md:flex items-center gap-2 hover:gap-4 transition-all"
-              >
-                ALL POSTS <ArrowRight size={16} />
-              </Link>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {blogPosts.slice(0, 3).map((post, i) => (
-              <ScrollReveal key={post.id} delay={i * 0.1}>
-                <Link to="/blog" className="group block" data-cursor-hover>
-                  <div className="aspect-video overflow-hidden mb-4">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
-                  <p className="font-mono text-[10px] text-[var(--color-gold)] mb-2">{post.category}</p>
-                  <h4 className="font-display italic text-xl text-[var(--color-ivory)] group-hover:text-[var(--color-gold)] transition-colors mb-2">
-                    {post.title}
-                  </h4>
-                  <p className="font-body text-sm text-[var(--color-silver)]">{post.date} &middot; {post.readTime}</p>
+      {/* Latest Blog Posts — hidden when blog is unpublished */}
+      {PUBLISHED_ROUTES.blog && (
+        <section className="section-padding">
+          <div className="max-w-[1440px] mx-auto px-[5vw]">
+            <ScrollReveal>
+              <div className="flex items-end justify-between mb-12">
+                <h2 className="font-display italic text-5xl md:text-6xl text-[var(--color-ivory)]">
+                  From the Blog
+                </h2>
+                <Link
+                  to="/blog"
+                  className="font-nav text-sm text-[var(--color-gold)] tracking-[0.2em] hidden md:flex items-center gap-2 hover:gap-4 transition-all"
+                >
+                  ALL POSTS <ArrowRight size={16} />
                 </Link>
-              </ScrollReveal>
-            ))}
+              </div>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {blogPosts.slice(0, 3).map((post, i) => (
+                <ScrollReveal key={post.id} delay={i * 0.1}>
+                  <Link to="/blog" className="group block" data-cursor-hover>
+                    <div className="aspect-video overflow-hidden mb-4">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <p className="font-mono text-[10px] text-[var(--color-gold)] mb-2">{post.category}</p>
+                    <h4 className="font-display italic text-xl text-[var(--color-ivory)] group-hover:text-[var(--color-gold)] transition-colors mb-2">
+                      {post.title}
+                    </h4>
+                    <p className="font-body text-sm text-[var(--color-silver)]">{post.date} &middot; {post.readTime}</p>
+                  </Link>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Footer CTA */}
       <section className="py-32 bg-[var(--color-graphite)]">

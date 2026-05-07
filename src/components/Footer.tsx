@@ -1,5 +1,6 @@
 ﻿import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
+import { isRoutePublished } from '../config/featureFlags';
 import { FaInstagram, FaYoutube, FaFacebookF, FaLinkedinIn, FaVimeoV } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
@@ -11,15 +12,15 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-nav text-sm text-[var(--color-gold)] mb-6">CONTACT</h4>
-            <p className="font-body text-[var(--color-chalk)] mb-2">olalekan@swankyi.com</p>
-            <p className="font-body text-[var(--color-silver)] text-sm">Based in the UK. Available worldwide.</p>
+            <p className="font-body text-[var(--color-chalk)] mb-2">Justart1406@gmail.com</p>
+            <p className="font-body text-[var(--color-silver)] text-sm">Based in Lagos, Nigeria. Available worldwide.</p>
           </div>
 
           {/* Navigation */}
           <div>
             <h4 className="font-nav text-sm text-[var(--color-gold)] mb-6">NAVIGATION</h4>
             <div className="grid grid-cols-2 gap-3">
-              {['Home', 'About', 'Work', 'Workshops', 'Stock', 'Rates', 'Presenting', 'Blog', 'Contact'].map((item) => (
+              {['Home', 'About', 'Work', 'Workshops', 'Stock', 'Rates', 'Presenting', 'Blog', 'Contact'].filter((item) => isRoutePublished(`/${item.toLowerCase()}`)).map((item) => (
                 <Link
                   key={item}
                   to={`/${item.toLowerCase()}`}

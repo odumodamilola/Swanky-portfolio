@@ -10,10 +10,10 @@ import { projects } from '../data/siteData';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const categories = ['ALL', 'FILM', 'STREAMING', 'BROADCAST', 'EXHIBITION'];
+const categories = ['FILM', 'ART', 'EXHIBITION'];
 
 export default function Work() {
-  const [activeFilter, setActiveFilter] = useState('ALL');
+  const [activeFilter, setActiveFilter] = useState('FILM');
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
   const filteredProjects = activeFilter === 'ALL'

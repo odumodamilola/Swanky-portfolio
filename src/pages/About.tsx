@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import ScrollReveal from '../components/ScrollReveal';
 import { siteImages } from '../assets/siteImages';
 import { gearItems, timelineMilestones } from '../data/siteData';
+import { PUBLISHED_ROUTES } from '../config/featureFlags';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -183,12 +184,14 @@ export default function About() {
                 <p className="font-body text-[var(--color-chalk)] leading-relaxed mb-8">
                   My teachings advocate professionalism, discipline, and personal presentation within creative industries. I promote a culture of excellence and intentionality within film production spaces.
                 </p>
-                <Link
-                  to="/workshops"
-                  className="font-nav text-sm text-[var(--color-gold)] tracking-[0.2em] flex items-center gap-2 hover:gap-4 transition-all"
-                >
-                  EXPLORE WORKSHOPS <ArrowRight size={16} />
-                </Link>
+                {PUBLISHED_ROUTES.workshops && (
+                  <Link
+                    to="/workshops"
+                    className="font-nav text-sm text-[var(--color-gold)] tracking-[0.2em] flex items-center gap-2 hover:gap-4 transition-all"
+                  >
+                    EXPLORE WORKSHOPS <ArrowRight size={16} />
+                  </Link>
+                )}
               </div>
               <div className="aspect-video overflow-hidden">
                 <img
