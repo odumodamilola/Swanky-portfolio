@@ -10,7 +10,7 @@ import { projects } from '../data/siteData';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const categories = ['FILM', 'ART', 'EXHIBITION'];
+const categories = ['FILM', 'STUDIO DESIGN', 'ART', 'EXHIBITION'];
 
 export default function Work() {
   const [activeFilter, setActiveFilter] = useState('FILM');

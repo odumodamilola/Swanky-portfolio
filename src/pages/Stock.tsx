@@ -36,10 +36,10 @@ export default function Stock() {
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-[5vw] text-center">
           <ScrollReveal>
             <h1 className="font-display italic text-6xl md:text-8xl text-[#F0EDE6] mb-4">
-              Art Prints
+              Art Collection
             </h1>
             <p className="font-nav text-sm text-[#C9A84C] tracking-[0.5em]">
-              LIMITED-EDITION GICLÉE PRINTS AVAILABLE
+              ORIGINAL WORKS & LIMITED EDITIONS
             </p>
           </ScrollReveal>
         </div>
@@ -64,32 +64,26 @@ export default function Stock() {
         </div>
       </section>
 
-      {/* Stock Grid */}
+      {/* Art Grid */}
       <section className="section-padding">
         <div className="max-w-[1440px] mx-auto px-[5vw]">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filtered.map((clip, i) => (
               <ScrollReveal key={clip.id} delay={i * 0.08}>
-                <div className="group relative overflow-hidden bg-[var(--color-graphite)] cursor-pointer" data-cursor-hover>
-                  <div className="aspect-video overflow-hidden">
+                <div className="group cursor-pointer" data-cursor-hover>
+                  <div className="overflow-hidden bg-[var(--color-graphite)]">
                     <img
                       src={clip.image}
                       alt={clip.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--gradient-card-from)] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-5">
-                    <h4 className="font-display italic text-xl text-[#F0EDE6]">{clip.title}</h4>
-                    <p className="font-mono text-[10px] text-[#C9A84C] mt-1">{clip.category}</p>
-                  </div>
-                  <div className="absolute top-3 right-3 flex gap-2">
-                    <span className="font-mono text-[10px] bg-[var(--color-void)]/80 text-[var(--color-chalk)] px-2 py-1">
-                      {clip.duration}
-                    </span>
-                    <span className="font-mono text-[10px] bg-[var(--color-gold)]/90 text-[var(--color-void)] px-2 py-1">
-                      {clip.resolution}
-                    </span>
+                  <div className="mt-4 space-y-1">
+                    <h4 className="font-display italic text-xl text-[var(--color-ivory)] group-hover:text-[var(--color-gold)] transition-colors">{clip.title}</h4>
+                    <p className="font-mono text-[10px] text-[var(--color-silver)]">
+                      {clip.resolution} &middot; {clip.duration}
+                    </p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -112,24 +106,20 @@ export default function Stock() {
               {
                 title: "Open Edition",
                 desc: "High-quality giclée prints on archival paper. Signed by the artist. Available in A3 and A2 formats.",
-                price: "From £150 per print",
               },
               {
                 title: "Limited Edition",
                 desc: "Numbered and signed prints in runs of 25 or fewer. Includes certificate of authenticity. Available in A2 and A1 formats.",
-                price: "From £500 per print",
               },
               {
                 title: "Commission",
                 desc: "Bespoke original artwork created to your brief. Includes consultation, concept development, and delivery.",
-                price: "POA",
               },
             ].map((license, i) => (
               <ScrollReveal key={license.title} delay={i * 0.1}>
                 <div className="bg-[var(--color-void)] p-8 border border-[var(--color-steel)] hover:border-[var(--color-gold)] transition-colors duration-300 h-full flex flex-col">
                   <h3 className="font-display italic text-2xl text-[var(--color-ivory)] mb-4">{license.title}</h3>
                   <p className="font-body text-sm text-[var(--color-chalk)] leading-relaxed mb-6 flex-grow">{license.desc}</p>
-                  <p className="font-nav text-sm text-[var(--color-gold)] tracking-[0.15em]">{license.price}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -152,7 +142,7 @@ export default function Stock() {
               className="inline-block font-nav text-sm tracking-[0.2em] px-10 py-4 bg-[var(--color-gold)] text-[var(--color-void)] hover:bg-[var(--color-amber)] transition-all duration-300"
               data-cursor-hover
             >
-              REQUEST ARTWORK
+              ENQUIRE ABOUT ARTWORK
             </a>
           </ScrollReveal>
         </div>

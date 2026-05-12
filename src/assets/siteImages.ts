@@ -39,6 +39,31 @@ import artAbstractHands from './images/art/art-abstract-hands-face.jpg';
 import artLionDetail from './images/art/art-lion-painting-detail.jpg';
 import artFramedWarm from './images/art/art-framed-warm-figurative-painting.jpg';
 
+// Studio Designs
+import studioBetaTalkBuilt from './images/studios/studio-beta-talk-waptv-built.jpeg';
+import studioBetaTalkRender from './images/studios/studio-beta-talk-3d-render.jpeg';
+import studioAsEDeyHot from './images/studios/studio-as-e-dey-hot-wazobia-max.jpeg';
+import studioKsmcNews from './images/studios/studio-ksmc-newsroom-render.jpeg';
+import studioKsmcDesk from './images/studios/studio-ksmc-desk-render.jpeg';
+import studioKsmcWide from './images/studios/studio-ksmc-news-wide.jpeg';
+import studioMorningShow from './images/studios/studio-morning-show-render.jpeg';
+import studioNtaAbuja from './images/studios/studio-nta-abuja-gudu-morning.jpeg';
+import studioWazobiaConstruction from './images/studios/studio-wazobia-tv-construction.jpeg';
+
+// Portraits & Behind-the-Scenes
+import portraitOnLoader from './images/portraits/portrait-on-loader.jpeg';
+import portraitOutdoorEvent from './images/portraits/portrait-outdoor-event.jpeg';
+import portraitWithBarrels from './images/portraits/portrait-with-painted-barrels.jpeg';
+import portraitBlueCap from './images/portraits/portrait-blue-cap-headshot.jpeg';
+import portraitColorfulJacket from './images/portraits/portrait-colorful-jacket.jpeg';
+import btsSetDressing from './images/work/bts-set-dressing.jpeg';
+import btsWorkshop from './images/work/bts-workshop-ladder.jpeg';
+import btsFilmLocation from './images/work/bts-film-location-village.jpeg';
+import btsDirecting from './images/work/bts-directing-crew.jpeg';
+
+// Gudu Morning Naija video
+import guduMorningVideo from './images/studios/gudu-morning-naija-nta.mp4';
+
 // Exhibition
 import exhibGalleryCrowd from './images/art/art-gallery-crowd-display.jpg';
 import exhibGalleryVisitors from './images/art/art-gallery-visitors-watching.jpg';
@@ -107,6 +132,31 @@ export const siteImages = {
     galleryPhoto: exhibGalleryPhoto,
     galleryCrowdView: exhibGalleryCrowdView,
   },
+  studios: {
+    betaTalkBuilt: studioBetaTalkBuilt,
+    betaTalkRender: studioBetaTalkRender,
+    asEDeyHot: studioAsEDeyHot,
+    ksmcNews: studioKsmcNews,
+    ksmcDesk: studioKsmcDesk,
+    ksmcWide: studioKsmcWide,
+    morningShow: studioMorningShow,
+    ntaAbuja: studioNtaAbuja,
+    wazobiaConstruction: studioWazobiaConstruction,
+  },
+  portraits: {
+    onLoader: portraitOnLoader,
+    outdoorEvent: portraitOutdoorEvent,
+    withBarrels: portraitWithBarrels,
+    blueCap: portraitBlueCap,
+    colorfulJacket: portraitColorfulJacket,
+  },
+  bts: {
+    setDressing: btsSetDressing,
+    workshop: btsWorkshop,
+    filmLocation: btsFilmLocation,
+    directing: btsDirecting,
+  },
+  guduMorningVideo,
 } as const;
 
 

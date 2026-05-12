@@ -9,7 +9,7 @@ const allNavLinks = [
   { label: "ABOUT", path: "/about" },
   { label: "WORK", path: "/work" },
   { label: "WORKSHOPS", path: "/workshops" },
-  { label: "STOCK", path: "/stock" },
+  { label: "ART", path: "/stock" },
   { label: "RATES", path: "/rates" },
   { label: "PRESENTING", path: "/presenting" },
   { label: "BLOG", path: "/blog" },
