@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react';
+﻿import { useEffect, useMemo, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Play, X, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -15,10 +15,30 @@ const categories = ['FILM', 'STUDIO DESIGN', 'ART', 'EXHIBITION'];
 export default function Work() {
   const [activeFilter, setActiveFilter] = useState('FILM');
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [artYearFilter, setArtYearFilter] = useState<'All' | string>('All');
 
   const filteredProjects = activeFilter === 'ALL'
     ? projects
     : projects.filter(p => p.category.toUpperCase() === activeFilter);
+
+  // Data for Art Catalog view
+  const artProjects = useMemo(() => projects.filter(p => p.category === 'Art'), []);
+  const artYears = useMemo(() => {
+    const ys = Array.from(new Set(artProjects.map(p => p.year)));
+    return ys.sort((a, b) => Number(b) - Number(a));
+  }, [artProjects]);
+  const filteredArtCatalog = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    return artProjects
+      .filter(p => (artYearFilter === 'All' ? true : p.year === artYearFilter))
+      .filter(p =>
+        !q
+          ? true
+          : p.title.toLowerCase().includes(q) || p.description.toLowerCase().includes(q)
+      )
+      .sort((a, b) => Number(b.year) - Number(a.year));
+  }, [artProjects, artYearFilter, searchQuery]);
 
   const openProject = (project: typeof projects[0]) => setSelectedProject(project);
   const closeModal = () => setSelectedProject(null);
@@ -106,41 +126,103 @@ export default function Work() {
         </div>
       </section>
 
-      {/* Project Grid */}
-      <section className="section-padding">
-        <div className="max-w-[1440px] mx-auto px-[5vw]">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredProjects.map((project, i) => (
-              <ScrollReveal key={project.id} delay={i * 0.08}>
-                <div
-                  onClick={() => openProject(project)}
-                  className="group relative overflow-hidden bg-[var(--color-graphite)] cursor-pointer"
-                  data-cursor-hover
+      {/* Project Grid / Art Catalog */}
+      {activeFilter === 'ART' ? (
+        <section className="section-padding">
+          <div className="max-w-[1440px] mx-auto px-[5vw]">
+            {/* Catalog controls */}
+            <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6 mb-8">
+              <div className="flex-1">
+                <input
+                  type="search"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search artworks by title or description..."
+                  className="w-full bg-[var(--color-graphite)] border border-[var(--color-steel)] px-4 py-3 font-body text-[var(--color-chalk)] placeholder:text-[var(--color-ash)] focus:border-[var(--color-gold)] focus:outline-none transition-colors"
+                />
+              </div>
+              <div>
+                <select
+                  value={artYearFilter}
+                  onChange={(e) => setArtYearFilter(e.target.value as 'All' | string)}
+                  className="bg-[var(--color-graphite)] border border-[var(--color-steel)] px-4 py-3 font-body text-[var(--color-chalk)] focus:border-[var(--color-gold)] focus:outline-none transition-colors"
                 >
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                    />
+                  <option value="All">All years</option>
+                  {artYears.map((y) => (
+                    <option key={y} value={y}>{y}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            {/* Catalog grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+              {filteredArtCatalog.map((project, i) => (
+                <ScrollReveal key={project.id} delay={(i % 8) * 0.06}>
+                  <div
+                    onClick={() => openProject(project)}
+                    className="group cursor-pointer border border-[var(--color-steel)] bg-[var(--color-graphite)] hover:border-[var(--color-gold)] transition-colors"
+                    data-cursor-hover
+                  >
+                    <div className="aspect-square overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <p className="font-mono text-[10px] text-[var(--color-gold)] mb-1">{project.year}</p>
+                      <h4 className="font-display italic text-lg text-[var(--color-ivory)]">{project.title}</h4>
+                      <p className="font-body text-xs text-[var(--color-silver)] mt-1">
+                        {project.specs.camera} &middot; {project.specs.lenses}
+                      </p>
+                    </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--gradient-card-from)] via-[var(--gradient-hero-from)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                    <p className="font-mono text-[10px] text-[#C9A84C] mb-1">
-                      {project.category} &mdash; {project.year}
-                    </p>
-                    <h4 className="font-display italic text-2xl text-[#F0EDE6]">{project.title}</h4>
-                    <p className="font-body text-sm text-[#D4D4D4] mt-1">{project.client}</p>
-                  </div>
-                  <div className="absolute top-4 right-4 w-10 h-10 rounded-full border border-[#F0EDE6] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Play size={14} className="text-[#F0EDE6] ml-0.5" />
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : (
+        <section className="section-padding">
+          <div className="max-w-[1440px] mx-auto px-[5vw]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredProjects.map((project, i) => (
+                <ScrollReveal key={project.id} delay={i * 0.08}>
+                  <div
+                    onClick={() => openProject(project)}
+                    className="group relative overflow-hidden bg-[var(--color-graphite)] cursor-pointer"
+                    data-cursor-hover
+                  >
+                    <div className="aspect-video overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--gradient-card-from)] via-[var(--gradient-hero-from)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+                      <p className="font-mono text-[10px] text-[#C9A84C] mb-1">
+                        {project.category} &mdash; {project.year}
+                      </p>
+                      <h4 className="font-display italic text-2xl text-[#F0EDE6]">{project.title}</h4>
+                      <p className="font-body text-sm text-[#D4D4D4] mt-1">{project.client}</p>
+                    </div>
+                    {project.video && (
+                      <div className="absolute top-4 right-4 w-10 h-10 rounded-full border border-[#F0EDE6] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <Play size={14} className="text-[#F0EDE6] ml-0.5" />
+                      </div>
+                    )}
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Project Modal */}
       {selectedProject && (
@@ -180,19 +262,12 @@ export default function Work() {
                   title={selectedProject.title}
                 />
               ) : (
-                <>
-                  <img
-                    src={selectedProject.image}
-                    alt={selectedProject.title}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full border-2 border-[var(--color-ivory)] flex items-center justify-center">
-                      <Play size={24} className="text-[var(--color-ivory)] ml-0.5" />
-                    </div>
-                  </div>
-                </>
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               )}
             </div>
 
