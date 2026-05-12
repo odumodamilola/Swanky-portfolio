@@ -164,11 +164,11 @@ export default function Work() {
                     className="group cursor-pointer border border-[var(--color-steel)] bg-[var(--color-graphite)] hover:border-[var(--color-gold)] transition-colors"
                     data-cursor-hover
                   >
-                    <div className="aspect-square overflow-hidden">
+                    <div className="aspect-square overflow-hidden bg-[var(--color-void)] flex items-center justify-center p-2">
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                        className="max-w-full max-h-full object-contain transition-transform duration-700 group-hover:scale-[1.01]"
                         loading="lazy"
                       />
                     </div>
@@ -265,7 +265,7 @@ export default function Work() {
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full h-full object-cover"
+                  className={`w-full h-full ${selectedProject.category === 'Art' ? 'object-contain' : 'object-cover'}`}
                   loading="lazy"
                 />
               )}
@@ -295,25 +295,48 @@ export default function Work() {
                 </div>
               </div>
               <div>
-                <h4 className="font-nav text-sm text-[var(--color-gold)] tracking-[0.15em] mb-4">TECHNICAL</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
-                    <span className="font-mono text-[10px] text-[var(--color-silver)]">MEDIUM</span>
-                    <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.camera}</span>
+                <h4 className="font-nav text-sm text-[var(--color-gold)] tracking-[0.15em] mb-4">
+                  {selectedProject.category === 'Art' ? 'ARTWORK DETAILS' : 'TECHNICAL'}
+                </h4>
+                {selectedProject.category === 'Art' ? (
+                  <div className="space-y-3">
+                    <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
+                      <span className="font-mono text-[10px] text-[var(--color-silver)]">MEDIUM</span>
+                      <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.camera}</span>
+                    </div>
+                    <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
+                      <span className="font-mono text-[10px] text-[var(--color-silver)]">SIZE</span>
+                      <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.lenses}</span>
+                    </div>
+                    <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
+                      <span className="font-mono text-[10px] text-[var(--color-silver)]">YEAR</span>
+                      <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.year}</span>
+                    </div>
+                    <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
+                      <span className="font-mono text-[10px] text-[var(--color-silver)]">PRICE</span>
+                      <span className="font-body text-sm text-[var(--color-chalk)]">{(selectedProject as any).price ?? '—'}</span>
+                    </div>
                   </div>
-                  <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
-                    <span className="font-mono text-[10px] text-[var(--color-silver)]">MATERIALS</span>
-                    <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.lenses}</span>
+                ) : (
+                  <div className="space-y-3">
+                    <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
+                      <span className="font-mono text-[10px] text-[var(--color-silver)]">MEDIUM</span>
+                      <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.camera}</span>
+                    </div>
+                    <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
+                      <span className="font-mono text-[10px] text-[var(--color-silver)]">MATERIALS</span>
+                      <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.lenses}</span>
+                    </div>
+                    <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
+                      <span className="font-mono text-[10px] text-[var(--color-silver)]">LOCATION</span>
+                      <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.location}</span>
+                    </div>
+                    <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
+                      <span className="font-mono text-[10px] text-[var(--color-silver)]">YEAR</span>
+                      <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.year}</span>
+                    </div>
                   </div>
-                  <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
-                    <span className="font-mono text-[10px] text-[var(--color-silver)]">LOCATION</span>
-                    <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.location}</span>
-                  </div>
-                  <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
-                    <span className="font-mono text-[10px] text-[var(--color-silver)]">YEAR</span>
-                    <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.specs.year}</span>
-                  </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
