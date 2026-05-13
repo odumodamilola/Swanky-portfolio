@@ -40,6 +40,17 @@ export default function Work() {
       .sort((a, b) => Number(b.year) - Number(a.year));
   }, [artProjects, artYearFilter, searchQuery]);
 
+  // Temporarily hide duplicates that share the same image asset
+  const dedupedArtCatalog = useMemo(() => {
+    const seen = new Set<string>();
+    return filteredArtCatalog.filter((p) => {
+      const key = p.image as unknown as string;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }, [filteredArtCatalog]);
+
   const openProject = (project: typeof projects[0]) => setSelectedProject(project);
   const closeModal = () => setSelectedProject(null);
 
@@ -97,7 +108,7 @@ export default function Work() {
               Crafting Worlds,<br />Frame by Frame
             </h1>
             <p className="font-body text-sm md:text-base text-[var(--color-chalk)] max-w-lg mx-auto">
-              Art direction, production design &amp; visual storytelling across film, art, and exhibition.
+              Art direction, production design &amp; visual storytelling across film, TV studio design, art, and exhibition.
             </p>
           </ScrollReveal>
         </div>
@@ -157,7 +168,7 @@ export default function Work() {
 
             {/* Catalog grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-              {filteredArtCatalog.map((project, i) => (
+              {dedupedArtCatalog.map((project, i) => (
                 <ScrollReveal key={project.id} delay={(i % 8) * 0.06}>
                   <div
                     onClick={() => openProject(project)}
@@ -311,10 +322,6 @@ export default function Work() {
                     <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
                       <span className="font-mono text-[10px] text-[var(--color-silver)]">YEAR</span>
                       <span className="font-body text-sm text-[var(--color-chalk)]">{selectedProject.year}</span>
-                    </div>
-                    <div className="flex justify-between border-b border-[var(--color-steel)] pb-2">
-                      <span className="font-mono text-[10px] text-[var(--color-silver)]">PRICE</span>
-                      <span className="font-body text-sm text-[var(--color-chalk)]">{(selectedProject as any).price ?? '—'}</span>
                     </div>
                   </div>
                 ) : (

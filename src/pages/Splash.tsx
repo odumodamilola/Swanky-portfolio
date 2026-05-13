@@ -92,7 +92,7 @@ export default function Splash() {
           ref={subtitleRef}
           className="font-nav text-sm md:text-base text-[#C9A84C] tracking-[0.5em] mt-6 md:mt-8"
         >
-          VISUAL ARTIST &middot; PRODUCTION DESIGNER &middot; NOLLYWOOD ART DIRECTOR
+          VISUAL ARTIST &middot; PRODUCTION DESIGNER &middot; FILM / TV STUDIO DESIGN
         </p>
       </div>
 

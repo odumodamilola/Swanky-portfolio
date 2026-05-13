@@ -53,7 +53,7 @@ export default function Home() {
             Olalekan Swanky Isiaka
           </h1>
           <p className="font-nav text-xs md:text-sm text-[#C9A84C] tracking-[0.5em] mt-4 md:mt-6">
-            VISUAL ARTIST &middot; PRODUCTION DESIGNER &middot; NOLLYWOOD ART DIRECTOR
+            VISUAL ARTIST &middot; PRODUCTION DESIGNER &middot; FILM / TV STUDIO DESIGN
           </p>
           <div className="flex gap-6 mt-10">
             <Link

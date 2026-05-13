@@ -137,20 +137,18 @@ export const projects = [
     image: siteImages.art.forestPath,
     description: "Depart from iniquity, follow the path of righteousness. Narrow is the way....",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
-    specs: { camera: "Mixed Media", lenses: "4ft x 4ft", location: "Lagos Studio", year: "2025" },
-    price: "₦1,000,000"
+    specs: { camera: "Mixed Media", lenses: "4ft x 4ft", location: "Lagos Studio", year: "2025" }
   },
   {
     id: 8,
-    title: "Definition of Peace",
+    title: "Peace in Chaos",
     category: "Art",
     year: "2025",
     client: "Original Painting",
     image: siteImages.art.doveSunrise,
     description: "Jesus offers a different kind of peace, one that quiets our hearts no matter what the circumstances. It’s the peace in the midst of a storm that lets us know that God is with us and He will never leave us. Even in life’s storms and brokenness, God’s peace remains calm and present. Like the dove on the drifting branch, His Spirit rests above the chaos and turns our weakness into hope.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
-    specs: { camera: "Mixed Media", lenses: "3ft x 4ft", location: "Lagos Studio", year: "2025" },
-    price: "₦350,000"
+    specs: { camera: "Mixed Media", lenses: "3ft x 4ft", location: "Lagos Studio", year: "2025" }
   },
   {
     id: 9,
@@ -161,8 +159,7 @@ export const projects = [
     image: siteImages.art.lionLamb,
     description: "Jesus is referred to as the 'Lion of the Tribe of Judah' and the 'Lamb who was slain,' symbolizing his dual nature as a powerful King and a sacrificial Savior. Jesus Christ is our King and our Savior.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
-    specs: { camera: "Acrylic on canvas", lenses: "4ft x 5ft", location: "Lagos Studio", year: "2024" },
-    price: "₦2,500,000"
+    specs: { camera: "Acrylic on canvas", lenses: "4ft x 5ft", location: "Lagos Studio", year: "2024" }
   },
   {
     id: 10,
@@ -173,8 +170,7 @@ export const projects = [
     image: siteImages.art.prayingWomen,
     description: "\"The Supplicant's Fire\" is an emotional, expressionistic painting depicting a person in fervent prayer, with fiery orange and red strokes symbolizing the consuming presence of the Holy Spirit descending upon the figure, highlighting the intensity, surrender, and divine burden of a profound faith encounter.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
-    specs: { camera: "Acrylic on canvas", lenses: "4ft x 6ft", location: "Lagos Studio", year: "2025" },
-    price: "₦1,000,000"
+    specs: { camera: "Acrylic on canvas", lenses: "4ft x 6ft", location: "Lagos Studio", year: "2025" }
   },
   {
     id: 11,
@@ -185,8 +181,7 @@ export const projects = [
     image: siteImages.art.sheepWater,
     description: "This artwork shows a weary sheep left behind while the shepherd approaches from afar. It symbolizes how God never abandons the one who feels stuck or overwhelmed. Even when life’s struggles hold us down, the Good Shepherd comes to restore, lift, and lead us back into purpose.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
-    specs: { camera: "Mixed Media", lenses: "3ft x 4ft", location: "Lagos Studio", year: "2025" },
-    price: "₦1,000,000"
+    specs: { camera: "Mixed Media", lenses: "3ft x 4ft", location: "Lagos Studio", year: "2025" }
   },
   {
     id: 12,
@@ -197,8 +192,7 @@ export const projects = [
     image: siteImages.art.walkingOnWater,
     description: "When we are focused on Jesus, we can weather any storm. We can face them head on, just as Peter could walk on the water. If we take our eyes off Jesus, and allow our minds to focus on the challenges and obstacles we are facing. That is when those challenges will start to feel overwhelming. So, keep your eyes fixed on Jesus. Focus on him more than you focus on the challenges.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
-    specs: { camera: "Mixed Media", lenses: "4ft x 5ft", location: "Lagos Studio", year: "2025" },
-    price: "₦800,000"
+    specs: { camera: "Mixed Media", lenses: "4ft x 5ft", location: "Lagos Studio", year: "2025" }
   },
   {
     id: 13,
@@ -207,23 +201,11 @@ export const projects = [
     year: "2025",
     client: "Original Painting",
     image: siteImages.art.birdsFlowers,
-    description: "This vibrant artwork, \"The Lillies and the Sparrows,\" serves as a visual reminder of Christ's teaching on providence, showcasing nature's beauty the fed sparrows and gloriously arrayed lilies as proof of God's complete and trustworthy care for humanity.",
+    description: "The first miracle of Jesus recorded in Scripture is the wedding at Cana, where He turned water into wine. The highlight of this story is Mary’s instruction to the servants: 'Whatever He tells you to do, do it.' Their obedience opened the way for the miracle. It’s a reminder that miracles begin in moments of trust, when obedience meets God’s power and the ordinary becomes extraordinary.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
-    specs: { camera: "Mixed Media", lenses: "4ft x 6ft", location: "Lagos Studio", year: "2025" },
-    price: "₦1,000,000"
+    specs: { camera: "Mixed Media", lenses: "4ft x 6ft", location: "Lagos Studio", year: "2025" }
   },
-  {
-    id: 14,
-    title: "The Roar Within",
-    category: "Art",
-    year: "2024",
-    client: "Original Painting",
-    image: siteImages.art.lionDetail,
-    description: "Jesus is referred to as the \"Lion of the Tribe of Judah\" and the \"Lamb who was slain,\" symbolizing his dual nature as a powerful King and a sacrificial Savior. A detailed study of strength and authority.",
-    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
-    specs: { camera: "Acrylic on canvas", lenses: "4ft x 5ft", location: "Lagos Studio", year: "2024" }
-  },
-  {
+    {
     id: 15,
     title: "Unwavering",
     category: "Art",
@@ -232,20 +214,18 @@ export const projects = [
     image: siteImages.art.framedWarm,
     description: "The woman with the issue of blood teaches us that when God gives us His attention, he is never multitasking. A faith as deep and unwavering as this woman's not only earns God's attention but it also secures His undivided attention.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
-    specs: { camera: "Acrylic on canvas", lenses: "3ft x 4ft", location: "Lagos Studio", year: "2024" },
-    price: "₦500,000"
+    specs: { camera: "Acrylic on canvas", lenses: "3ft x 4ft", location: "Lagos Studio", year: "2024" }
   },
   {
     id: 30,
-    title: "Peace in Chaos",
+    title: "Call for Prayer",
     category: "Art",
     year: "2025",
     client: "Original Painting",
     image: siteImages.art.abstractHands,
     description: "John 16:33, \"I have told you these things, so that in me you may have peace. In this world you will have trouble. But take heart! I have overcome the world\"",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
-    specs: { camera: "Acrylic on canvas", lenses: "4ft x 4ft", location: "Lagos Studio", year: "2025" },
-    price: "₦1,000,000"
+    specs: { camera: "Acrylic on canvas", lenses: "4ft x 4ft", location: "Lagos Studio", year: "2025" }
   },
   {
     id: 31,
@@ -256,8 +236,7 @@ export const projects = [
     image: siteImages.art.forestPath,
     description: "The most beautiful truth of mankind is this: Jesus died, He rose, and He ascended — a divine story painted in hues that heal.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
-    specs: { camera: "Mixed Media", lenses: "2ft x 3ft", location: "Lagos Studio", year: "2025" },
-    price: "₦1,000,000"
+    specs: { camera: "Mixed Media", lenses: "2ft x 3ft", location: "Lagos Studio", year: "2025" }
   },
   {
     id: 32,
@@ -268,8 +247,7 @@ export const projects = [
     image: siteImages.art.forestPath,
     description: "Breaking out from the works of flesh; idolatory, sexual immorality, hatred, jealousy... (Galatians 5:19-21) into manifesting the fruit of the Spirit; Love, joy, patience, peace, gentleness, self-control... (Galatians 5:22-23) Fight the good fight of faith.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
-    specs: { camera: "Mixed Media", lenses: "4ft x 6ft", location: "Lagos Studio", year: "2025" },
-    price: "₦1,000,000"
+    specs: { camera: "Mixed Media", lenses: "4ft x 6ft", location: "Lagos Studio", year: "2025" }
   },
   {
     id: 16,
@@ -445,7 +423,7 @@ export const workshopDates = [
 
 export const stockClips = [
   { id: 1, title: "The Path", category: "Paintings", duration: "4ft x 4ft", resolution: "Mixed Media", image: siteImages.art.forestPath },
-  { id: 2, title: "Definition of Peace", category: "Paintings", duration: "3ft x 4ft", resolution: "Mixed Media", image: siteImages.art.doveSunrise },
+  { id: 2, title: "Peace in Chaos", category: "Paintings", duration: "3ft x 4ft", resolution: "Mixed Media", image: siteImages.art.doveSunrise },
   { id: 3, title: "The Lion and The Lamb", category: "Paintings", duration: "4ft x 5ft", resolution: "Acrylic on canvas", image: siteImages.art.lionLamb },
   { id: 4, title: "The Lillies and the Sparrows", category: "Paintings", duration: "4ft x 6ft", resolution: "Mixed Media", image: siteImages.art.birdsFlowers },
   { id: 5, title: "Call for Prayer", category: "Paintings", duration: "4ft x 6ft", resolution: "Acrylic on canvas", image: siteImages.art.prayingWomen },
@@ -453,7 +431,7 @@ export const stockClips = [
   { id: 7, title: "The Walk / Gaze", category: "Paintings", duration: "4ft x 5ft", resolution: "Mixed Media", image: siteImages.art.walkingOnWater },
   { id: 8, title: "The Roar Within", category: "Paintings", duration: "4ft x 5ft", resolution: "Acrylic on canvas", image: siteImages.art.lionDetail },
   { id: 9, title: "Unwavering", category: "Paintings", duration: "3ft x 4ft", resolution: "Acrylic on canvas", image: siteImages.art.framedWarm },
-  { id: 10, title: "Peace in Chaos", category: "Paintings", duration: "4ft x 4ft", resolution: "Acrylic on canvas", image: siteImages.art.abstractHands },
+  { id: 10, title: "Call for Prayer", category: "Paintings", duration: "4ft x 4ft", resolution: "Acrylic on canvas", image: siteImages.art.abstractHands },
   { id: 11, title: "Hope", category: "Paintings", duration: "2ft x 3ft", resolution: "Mixed Media", image: siteImages.art.forestPath },
   { id: 12, title: "The Good Fight of Faith", category: "Paintings", duration: "4ft x 6ft", resolution: "Mixed Media", image: siteImages.art.forestPath }
 ];
