@@ -1,4 +1,4 @@
-﻿import heroSplash from './images/portraits/artist-portrait-armchair.jpg';
+import heroSplash from './images/portraits/artist-portrait-armchair.jpg';
 import showreelVideo from './images/VID-20260216-WA0071.mp4';
 import heroAbout from './images/portraits/artist-portrait-front-patterned.jpg';
 import heroWorkshops from './images/work/work-event-host-speaking.jpg';
@@ -38,6 +38,7 @@ import artWalkingOnWater from './images/art/art-walking-on-water.jpg';
 import artAbstractHands from './images/art/art-abstract-hands-face.jpg';
 import artLionDetail from './images/art/art-lion-painting-detail.jpg';
 import artFramedWarm from './images/art/art-framed-warm-figurative-painting.jpg';
+import artWine from './images/art/art-wine.png';
 
 // Studio Designs
 import studioBetaTalkBuilt from './images/studios/studio-beta-talk-waptv-built.jpeg';
@@ -70,9 +71,7 @@ import exhibGalleryVisitors from './images/art/art-gallery-visitors-watching.jpg
 import exhibGalleryOutdoor from './images/art/art-gallery-outdoor-display.jpg';
 import exhibPrayingWomanExhib from './images/art/art-praying-woman-exhibition.jpg';
 import exhibAbstractFace from './images/art/art-abstract-face-exhibition.jpg';
-import exhibArtistArmchair from './images/portraits/artist-portrait-armchair.jpg';
-import exhibArtistWithPainting from './images/portraits/artist-portrait-with-painting.jpg';
-import exhibArtistPaintingAction from './images/portraits/artist-painting-action.jpg';
+
 import exhibGalleryPhoto from './images/art/art-gallery-photo-capture.jpg';
 import exhibGalleryCrowdView from './images/art/art-gallery-crowd-view.jpg';
 
@@ -119,6 +118,7 @@ export const siteImages = {
     abstractHands: artAbstractHands,
     lionDetail: artLionDetail,
     framedWarm: artFramedWarm,
+    wine: artWine,
   },
   exhibition: {
     galleryCrowd: exhibGalleryCrowd,
@@ -126,9 +126,7 @@ export const siteImages = {
     galleryOutdoor: exhibGalleryOutdoor,
     prayingWomanExhib: exhibPrayingWomanExhib,
     abstractFace: exhibAbstractFace,
-    artistArmchair: exhibArtistArmchair,
-    artistWithPainting: exhibArtistWithPainting,
-    artistPaintingAction: exhibArtistPaintingAction,
+
     galleryPhoto: exhibGalleryPhoto,
     galleryCrowdView: exhibGalleryCrowdView,
   },

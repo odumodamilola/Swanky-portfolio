@@ -1,4 +1,4 @@
-﻿import { siteImages } from '../assets/siteImages';
+import { siteImages } from '../assets/siteImages';
 
 export const projects = [
   {
@@ -6,7 +6,7 @@ export const projects = [
     title: "A Tribe Called Judah",
     category: "Film",
     year: "2023",
-    client: "Nollywood",
+    client: "SceneOne TV",
     image: "https://img.youtube.com/vi/nrSx7PkBN6o/maxresdefault.jpg",
     video: "https://www.youtube.com/embed/nrSx7PkBN6o",
     description: "Art direction for one of the highest-grossing Nollywood films of all time. Delivered culturally authentic, narrative-driven environments across multiple locations.",
@@ -18,7 +18,7 @@ export const projects = [
     title: "Everybody Loves Jenifa",
     category: "Film",
     year: "2024",
-    client: "Nollywood",
+    client: "SceneOne TV",
     image: "https://img.youtube.com/vi/x4JIoP5FlhU/maxresdefault.jpg",
     video: "https://www.youtube.com/embed/x4JIoP5FlhU",
     description: "Production design and art direction for the blockbuster sequel. Created vibrant, story-driven sets that balanced comedy with cultural richness.",
@@ -30,7 +30,7 @@ export const projects = [
     title: "Shanty Town",
     category: "Film",
     year: "2023",
-    client: "Giant Media",
+    client: "Netflix Original",
     image: "https://img.youtube.com/vi/g3-TbsMEVPw/maxresdefault.jpg",
     video: "https://www.youtube.com/embed/g3-TbsMEVPw",
     description: "Art direction for the Netflix original series. Built gritty, immersive environments that brought the story's underworld to life with mood-driven colour and texture.",
@@ -48,6 +48,85 @@ export const projects = [
     description: "Production design for the feature film. Crafted visually cohesive worlds that enhanced the narrative through detailed set construction and cultural authenticity.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Kunle Afolayan", client: "Cinemax" },
     specs: { camera: "Full Production Design", lenses: "Set Build & Art Direction", location: "Lagos, Nigeria", year: "2025" }
+  },
+  {
+    id: 40,
+    title: "Ginger",
+    category: "Film",
+    year: "2024",
+    client: "Nollywood",
+    image: "https://img.youtube.com/vi/jx1N4tj9AzY/maxresdefault.jpg",
+    video: "https://www.youtube.com/embed/jx1N4tj9AzY?si=SB6qbsBF3sDt8nQ_",
+    description: "Art direction and set design for the feature film Ginger. Focused on creating authentic, lived-in environments that reflect the story's emotional core.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Production Team", client: "Nollywood" },
+    specs: { camera: "Set Design", lenses: "Art Direction", location: "Lagos, Nigeria", year: "2024" }
+  },
+  {
+    id: 41,
+    title: "Palava",
+    category: "Film",
+    year: "2023",
+    client: "Inkblot Productions",
+    image: siteImages.projects.workStage,
+    description: "Production design for the comedy feature Palava. Created vibrant and dynamic sets that complemented the film's energetic storytelling.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Niyi Akinmolayan", client: "Inkblot" },
+    specs: { camera: "Production Design", lenses: "Set Construction", location: "Lagos, Nigeria", year: "2023" }
+  },
+  {
+    id: 42,
+    title: "Bank Alert",
+    category: "Film",
+    year: "2023",
+    client: "Nollywood",
+    image: siteImages.projects.workCommercial,
+    description: "Art direction for the heist comedy Bank Alert. Balanced high-stakes environments with functional set design for fast-paced action.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Production Team", client: "Nollywood" },
+    specs: { camera: "Art Direction", lenses: "Set Build", location: "Lagos, Nigeria", year: "2023" }
+  },
+  {
+    id: 43,
+    title: "Cordelia",
+    category: "Film",
+    year: "2023",
+    client: "Nollywood",
+    image: siteImages.bts.setDressing,
+    description: "Period set design and art direction for Cordelia. A focus on historical accuracy and atmospheric world-building.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Tunde Kelani", client: "Nollywood" },
+    specs: { camera: "Period Set Design", lenses: "Scenic Art", location: "Lagos, Nigeria", year: "2023" }
+  },
+  {
+    id: 44,
+    title: "My Siblings & I",
+    category: "Film",
+    year: "2018-2023",
+    client: "SceneOne TV",
+    image: siteImages.projects.workPortrait,
+    description: "Art direction for the long-running hit family sitcom. Created iconic, recognizable home environments that became central to the show's identity.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Funke Akindele", client: "SceneOne TV" },
+    specs: { camera: "Studio Set Design", lenses: "Interior Art Direction", location: "Lagos, Nigeria", year: "2018" }
+  },
+  {
+    id: 45,
+    title: "Jenifa's Diary",
+    category: "Film",
+    year: "2017-2023",
+    client: "SceneOne TV",
+    image: "https://img.youtube.com/vi/xDUf-POwmfI/maxresdefault.jpg",
+    video: "https://www.youtube.com/embed/xDUf-POwmfI?si=mI_9cX4HUrxxjg4b",
+    description: "Long-term art direction for one of Africa's most successful comedy series. Built and managed sets that evolved with the characters over many seasons.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Funke Akindele", client: "SceneOne TV" },
+    specs: { camera: "Art Direction", lenses: "Set Management", location: "Lagos, Nigeria", year: "2017" }
+  },
+  {
+    id: 46,
+    title: "Omo Ghetto: The Saga",
+    category: "Film",
+    year: "2020",
+    client: "SceneOne TV",
+    image: siteImages.bts.directing,
+    description: "Art direction for the record-breaking Nollywood blockbuster. Created gritty and vibrant urban environments that defined the film's iconic look.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Funke Akindele", client: "SceneOne TV" },
+    specs: { camera: "Art Direction", lenses: "Set Construction", location: "Lagos, Nigeria", year: "2020" }
   },
   {
     id: 5,
@@ -119,34 +198,43 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Hues That Heal",
+    title: "Hues That Heal — Solo Exhibition",
     category: "Exhibition",
     year: "2025",
     client: "Solo Exhibition",
     image: siteImages.exhibition.galleryCrowd,
-    description: "Debut solo art exhibition held at Victoria Garden City, Lekki, Lagos. A faith-inspired collection exploring healing, restoration, and spirituality through expressive colour and textured compositions.",
-    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Lagos Art Party" },
-    specs: { camera: "Painting & Mixed Media", lenses: "Acrylic & Mixed Media", location: "Lekki, Lagos", year: "2025" }
+    description: "Debut solo art exhibition exploring healing, restoration, and spirituality through expressive colour and textured compositions. This gallery showcases behind-the-scenes moments, opening night energy, and installation views.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Solo Exhibition" },
+    specs: { camera: "Exhibition Design & Curation", lenses: "Hues That Heal", location: "VGC, Lekki, Lagos", year: "2025" },
+    gallery: [
+      siteImages.exhibition.galleryCrowd,
+      siteImages.exhibition.galleryVisitors,
+      siteImages.exhibition.galleryOutdoor,
+      siteImages.exhibition.prayingWomanExhib,
+      siteImages.exhibition.abstractFace,
+      siteImages.exhibition.galleryPhoto,
+      siteImages.exhibition.galleryCrowdView
+    ]
   },
   {
     id: 7,
     title: "The Path",
     category: "Art",
     year: "2025",
-    client: "Original Painting",
+    client: "N1.000,000",
     image: siteImages.art.forestPath,
-    description: "Depart from iniquity, follow the path of righteousness. Narrow is the way....",
+    description: "THE PATH... Depart from iniquity, follow the path of righteousness. Narrow is the way....",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
     specs: { camera: "Mixed Media", lenses: "4ft x 4ft", location: "Lagos Studio", year: "2025" }
   },
   {
     id: 8,
-    title: "Peace in Chaos",
+    title: "Definition of Peace",
     category: "Art",
     year: "2025",
-    client: "Original Painting",
+    client: "N350.000",
     image: siteImages.art.doveSunrise,
-    description: "Jesus offers a different kind of peace, one that quiets our hearts no matter what the circumstances. It’s the peace in the midst of a storm that lets us know that God is with us and He will never leave us. Even in life’s storms and brokenness, God’s peace remains calm and present. Like the dove on the drifting branch, His Spirit rests above the chaos and turns our weakness into hope.",
+    description: "Even in life's storms and brokenness, God's peace remains calm and present. Like the dove on the drifting branch, His Spirit rests above the chaos and turns our weakness into hope. Jesus offers a different kind of peace, one that quiets our hearts no matter what the circumstances.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
     specs: { camera: "Mixed Media", lenses: "3ft x 4ft", location: "Lagos Studio", year: "2025" }
   },
@@ -155,7 +243,7 @@ export const projects = [
     title: "The Lion and The Lamb",
     category: "Art",
     year: "2024",
-    client: "Original Painting",
+    client: "N2.500.000",
     image: siteImages.art.lionLamb,
     description: "Jesus is referred to as the 'Lion of the Tribe of Judah' and the 'Lamb who was slain,' symbolizing his dual nature as a powerful King and a sacrificial Savior. Jesus Christ is our King and our Savior.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
@@ -166,7 +254,7 @@ export const projects = [
     title: "Call for Prayer",
     category: "Art",
     year: "2025",
-    client: "Original Painting",
+    client: "N1.000.000",
     image: siteImages.art.prayingWomen,
     description: "\"The Supplicant's Fire\" is an emotional, expressionistic painting depicting a person in fervent prayer, with fiery orange and red strokes symbolizing the consuming presence of the Holy Spirit descending upon the figure, highlighting the intensity, surrender, and divine burden of a profound faith encounter.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
@@ -177,9 +265,9 @@ export const projects = [
     title: "Lost Sheep",
     category: "Art",
     year: "2025",
-    client: "Original Painting",
+    client: "N1.000.000",
     image: siteImages.art.sheepWater,
-    description: "This artwork shows a weary sheep left behind while the shepherd approaches from afar. It symbolizes how God never abandons the one who feels stuck or overwhelmed. Even when life’s struggles hold us down, the Good Shepherd comes to restore, lift, and lead us back into purpose.",
+    description: "This artwork shows a weary sheep left behind while the shepherd approaches from afar. It symbolizes how God never abandons the one who feels stuck or overwhelmed. Even when life's struggles hold us down, the Good Shepherd comes to restore, lift, and lead us back into purpose.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
     specs: { camera: "Mixed Media", lenses: "3ft x 4ft", location: "Lagos Studio", year: "2025" }
   },
@@ -188,40 +276,51 @@ export const projects = [
     title: "The Walk / Gaze",
     category: "Art",
     year: "2025",
-    client: "Original Painting",
+    client: "N800.000",
     image: siteImages.art.walkingOnWater,
-    description: "When we are focused on Jesus, we can weather any storm. We can face them head on, just as Peter could walk on the water. If we take our eyes off Jesus, and allow our minds to focus on the challenges and obstacles we are facing. That is when those challenges will start to feel overwhelming. So, keep your eyes fixed on Jesus. Focus on him more than you focus on the challenges.",
+    description: "When we are focused on Jesus, we can weather any storm. We can face them head on, just as Peter could walk on the water. If we take our eyes off Jesus, and allow our minds to focus on the challenges and obstacles we are facing, that is when those challenges will start to feel overwhelming.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
     specs: { camera: "Mixed Media", lenses: "4ft x 5ft", location: "Lagos Studio", year: "2025" }
   },
   {
     id: 13,
-    title: "The Lillies and the Sparrows",
+    title: "The Lillies and the Sparrows (Cana)",
     category: "Art",
     year: "2025",
-    client: "Original Painting",
-    image: siteImages.art.birdsFlowers,
-    description: "The first miracle of Jesus recorded in Scripture is the wedding at Cana, where He turned water into wine. The highlight of this story is Mary’s instruction to the servants: 'Whatever He tells you to do, do it.' Their obedience opened the way for the miracle. It’s a reminder that miracles begin in moments of trust, when obedience meets God’s power and the ordinary becomes extraordinary.",
+    client: "N1.000.000",
+    image: siteImages.art.wine,
+    description: "A reminder that miracles begin in moments of trust, when obedience meets God's power and the ordinary becomes extraordinary. Based on the first miracle at Cana, where water was turned into wine. 'Whatever He tells you to do, do it.'",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
     specs: { camera: "Mixed Media", lenses: "4ft x 6ft", location: "Lagos Studio", year: "2025" }
   },
-    {
+  {
+    id: 131,
+    title: "The Lillies and the Sparrows (Providence)",
+    category: "Art",
+    year: "2025",
+    client: "N1.000.000",
+    image: siteImages.art.birdsFlowers,
+    description: "A visual reminder of Christ's teaching on providence, showcasing nature's beauty—the fed sparrows and gloriously arrayed lilies—as proof of God's complete and trustworthy care for humanity.",
+    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
+    specs: { camera: "Mixed Media", lenses: "4ft x 6ft", location: "Lagos Studio", year: "2025" }
+  },
+  {
     id: 15,
-    title: "Unwavering",
+    title: "If I May Touch His Garment",
     category: "Art",
     year: "2024",
-    client: "Original Painting",
+    client: "N500.000",
     image: siteImages.art.framedWarm,
-    description: "The woman with the issue of blood teaches us that when God gives us His attention, he is never multitasking. A faith as deep and unwavering as this woman's not only earns God's attention but it also secures His undivided attention.",
+    description: "The woman with the issue of blood teaches us that when God gives us His attention, he is never multitasking. A faith as deep and unwavering as this woman's secures His undivided attention.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
     specs: { camera: "Acrylic on canvas", lenses: "3ft x 4ft", location: "Lagos Studio", year: "2024" }
   },
   {
     id: 30,
-    title: "Call for Prayer",
+    title: "Peace in Chaos",
     category: "Art",
     year: "2025",
-    client: "Original Painting",
+    client: "N1.000,000",
     image: siteImages.art.abstractHands,
     description: "John 16:33, \"I have told you these things, so that in me you may have peace. In this world you will have trouble. But take heart! I have overcome the world\"",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
@@ -232,7 +331,7 @@ export const projects = [
     title: "Hope",
     category: "Art",
     year: "2025",
-    client: "Original Painting",
+    client: "N1.000.000",
     image: siteImages.art.forestPath,
     description: "The most beautiful truth of mankind is this: Jesus died, He rose, and He ascended — a divine story painted in hues that heal.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
@@ -243,9 +342,9 @@ export const projects = [
     title: "The Good Fight of Faith",
     category: "Art",
     year: "2025",
-    client: "Original Painting",
+    client: "N1.000.000",
     image: siteImages.art.forestPath,
-    description: "Breaking out from the works of flesh; idolatory, sexual immorality, hatred, jealousy... (Galatians 5:19-21) into manifesting the fruit of the Spirit; Love, joy, patience, peace, gentleness, self-control... (Galatians 5:22-23) Fight the good fight of faith.",
+    description: "Breaking out from the works of flesh... into manifesting the fruit of the Spirit; Love, joy, patience, peace, gentleness, self-control... Fight the good fight of faith.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
     specs: { camera: "Mixed Media", lenses: "4ft x 6ft", location: "Lagos Studio", year: "2025" }
   },
@@ -293,39 +392,7 @@ export const projects = [
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Lagos Art Party" },
     specs: { camera: "Exhibition Piece", lenses: "Mixed Media on Canvas", location: "VGC, Lekki, Lagos", year: "2025" }
   },
-  {
-    id: 20,
-    title: "The Artist's Studio",
-    category: "Exhibition",
-    year: "2025",
-    client: "Solo Exhibition",
-    image: siteImages.exhibition.artistArmchair,
-    description: "Olalekan Swanky Isiaka surrounded by his works in the studio — a portrait of the creative environment where faith-inspired art is born.",
-    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Personal Documentation" },
-    specs: { camera: "Studio Portrait", lenses: "Environmental", location: "Lagos Studio", year: "2025" }
-  },
-  {
-    id: 21,
-    title: "Behind the Canvas",
-    category: "Exhibition",
-    year: "2025",
-    client: "Solo Exhibition",
-    image: siteImages.exhibition.artistWithPainting,
-    description: "The artist stands alongside a finished work — bridging creator and creation, inviting viewers into the story behind each piece.",
-    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Personal Documentation" },
-    specs: { camera: "Artist Portrait", lenses: "With Artwork", location: "Lagos Studio", year: "2025" }
-  },
-  {
-    id: 22,
-    title: "Live Painting Session",
-    category: "Exhibition",
-    year: "2025",
-    client: "Solo Exhibition",
-    image: siteImages.exhibition.artistPaintingAction,
-    description: "A live painting demonstration at the exhibition opening — showing the raw creative process and technique behind each work in real time.",
-    credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Lagos Art Party" },
-    specs: { camera: "Live Art", lenses: "Process Documentation", location: "VGC, Lekki, Lagos", year: "2025" }
-  },
+
   {
     id: 23,
     title: "Gallery Moments",
@@ -423,17 +490,15 @@ export const workshopDates = [
 
 export const stockClips = [
   { id: 1, title: "The Path", category: "Paintings", duration: "4ft x 4ft", resolution: "Mixed Media", image: siteImages.art.forestPath },
-  { id: 2, title: "Peace in Chaos", category: "Paintings", duration: "3ft x 4ft", resolution: "Mixed Media", image: siteImages.art.doveSunrise },
+  { id: 2, title: "Definition of Peace", category: "Paintings", duration: "3ft x 4ft", resolution: "Mixed Media", image: siteImages.art.doveSunrise },
   { id: 3, title: "The Lion and The Lamb", category: "Paintings", duration: "4ft x 5ft", resolution: "Acrylic on canvas", image: siteImages.art.lionLamb },
-  { id: 4, title: "The Lillies and the Sparrows", category: "Paintings", duration: "4ft x 6ft", resolution: "Mixed Media", image: siteImages.art.birdsFlowers },
+  { id: 4, title: "The Lillies and the Sparrows (Cana)", category: "Paintings", duration: "4ft x 6ft", resolution: "Mixed Media", image: siteImages.art.wine },
   { id: 5, title: "Call for Prayer", category: "Paintings", duration: "4ft x 6ft", resolution: "Acrylic on canvas", image: siteImages.art.prayingWomen },
   { id: 6, title: "Lost Sheep", category: "Paintings", duration: "3ft x 4ft", resolution: "Mixed Media", image: siteImages.art.sheepWater },
   { id: 7, title: "The Walk / Gaze", category: "Paintings", duration: "4ft x 5ft", resolution: "Mixed Media", image: siteImages.art.walkingOnWater },
-  { id: 8, title: "The Roar Within", category: "Paintings", duration: "4ft x 5ft", resolution: "Acrylic on canvas", image: siteImages.art.lionDetail },
-  { id: 9, title: "Unwavering", category: "Paintings", duration: "3ft x 4ft", resolution: "Acrylic on canvas", image: siteImages.art.framedWarm },
-  { id: 10, title: "Call for Prayer", category: "Paintings", duration: "4ft x 4ft", resolution: "Acrylic on canvas", image: siteImages.art.abstractHands },
-  { id: 11, title: "Hope", category: "Paintings", duration: "2ft x 3ft", resolution: "Mixed Media", image: siteImages.art.forestPath },
-  { id: 12, title: "The Good Fight of Faith", category: "Paintings", duration: "4ft x 6ft", resolution: "Mixed Media", image: siteImages.art.forestPath }
+  { id: 8, title: "If I May Touch His Garment", category: "Paintings", duration: "3ft x 4ft", resolution: "Acrylic on canvas", image: siteImages.art.framedWarm },
+  { id: 9, title: "Hope", category: "Paintings", duration: "2ft x 3ft", resolution: "Mixed Media", image: siteImages.art.forestPath },
+  { id: 10, title: "The Good Fight of Faith", category: "Paintings", duration: "4ft x 6ft", resolution: "Mixed Media", image: siteImages.art.forestPath }
 ];
 
 export const pastEvents = [
