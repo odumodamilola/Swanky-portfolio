@@ -39,6 +39,10 @@ import artAbstractHands from './images/art/art-abstract-hands-face.jpg';
 import artLionDetail from './images/art/art-lion-painting-detail.jpg';
 import artFramedWarm from './images/art/art-framed-warm-figurative-painting.jpg';
 import artWine from './images/art/art-wine.png';
+import artGoodFight from './WhatsApp Image 2026-05-12 at 11.09.17 PM.jpeg';
+import artHope from './WhatsApp Image 2026-05-12 at 11.10.14 PM.jpeg';
+import artUnique9 from './images/WhatsApp Image 2026-05-09 at 10.18.32 AM.jpeg';
+import artVideo9 from './videos/WhatsApp Video 2026-05-09 at 10.18.25 AM.mp4';
 
 // Studio Designs
 import studioBetaTalkBuilt from './images/studios/studio-beta-talk-waptv-built.jpeg';
@@ -119,6 +123,10 @@ export const siteImages = {
     lionDetail: artLionDetail,
     framedWarm: artFramedWarm,
     wine: artWine,
+    goodFight: artGoodFight,
+    hope: artHope,
+    unique9: artUnique9,
+    video9: artVideo9,
   },
   exhibition: {
     galleryCrowd: exhibGalleryCrowd,

@@ -67,7 +67,8 @@ export const projects = [
     category: "Film",
     year: "2023",
     client: "Inkblot Productions",
-    image: siteImages.projects.workStage,
+    image: "https://img.youtube.com/vi/_9tmgJlPdzQ/maxresdefault.jpg",
+    video: "https://www.youtube.com/embed/_9tmgJlPdzQ?si=Ln9TrPLIkbbaSj7p",
     description: "Production design for the comedy feature Palava. Created vibrant and dynamic sets that complemented the film's energetic storytelling.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Niyi Akinmolayan", client: "Inkblot" },
     specs: { camera: "Production Design", lenses: "Set Construction", location: "Lagos, Nigeria", year: "2023" }
@@ -78,7 +79,8 @@ export const projects = [
     category: "Film",
     year: "2023",
     client: "Nollywood",
-    image: siteImages.projects.workCommercial,
+    image: "https://img.youtube.com/vi/F8OE2ZCXWpE/maxresdefault.jpg",
+    video: "https://www.youtube.com/embed/F8OE2ZCXWpE?si=IRY2h0T4LOsdTibN",
     description: "Art direction for the heist comedy Bank Alert. Balanced high-stakes environments with functional set design for fast-paced action.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Production Team", client: "Nollywood" },
     specs: { camera: "Art Direction", lenses: "Set Build", location: "Lagos, Nigeria", year: "2023" }
@@ -89,7 +91,8 @@ export const projects = [
     category: "Film",
     year: "2023",
     client: "Nollywood",
-    image: siteImages.bts.setDressing,
+    image: "https://img.youtube.com/vi/VRXOyUHXfbU/maxresdefault.jpg",
+    video: "https://www.youtube.com/embed/VRXOyUHXfbU?si=WT6rzUBfKP9TbP1c",
     description: "Period set design and art direction for Cordelia. A focus on historical accuracy and atmospheric world-building.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Tunde Kelani", client: "Nollywood" },
     specs: { camera: "Period Set Design", lenses: "Scenic Art", location: "Lagos, Nigeria", year: "2023" }
@@ -123,7 +126,8 @@ export const projects = [
     category: "Film",
     year: "2020",
     client: "SceneOne TV",
-    image: siteImages.bts.directing,
+    image: "https://img.youtube.com/vi/p5PDxj-ZRrg/maxresdefault.jpg",
+    video: "https://www.youtube.com/embed/p5PDxj-ZRrg?si=ygBdxzYHQ1JREPZG",
     description: "Art direction for the record-breaking Nollywood blockbuster. Created gritty and vibrant urban environments that defined the film's iconic look.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Funke Akindele", client: "SceneOne TV" },
     specs: { camera: "Art Direction", lenses: "Set Construction", location: "Lagos, Nigeria", year: "2020" }
@@ -332,7 +336,7 @@ export const projects = [
     category: "Art",
     year: "2025",
     client: "N1.000.000",
-    image: siteImages.art.forestPath,
+    image: siteImages.art.hope,
     description: "The most beautiful truth of mankind is this: Jesus died, He rose, and He ascended — a divine story painted in hues that heal.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
     specs: { camera: "Mixed Media", lenses: "2ft x 3ft", location: "Lagos Studio", year: "2025" }
@@ -343,7 +347,7 @@ export const projects = [
     category: "Art",
     year: "2025",
     client: "N1.000.000",
-    image: siteImages.art.forestPath,
+    image: siteImages.art.goodFight,
     description: "Breaking out from the works of flesh... into manifesting the fruit of the Spirit; Love, joy, patience, peace, gentleness, self-control... Fight the good fight of faith.",
     credits: { dp: "Olalekan Swanky Isiaka", director: "Olalekan Swanky Isiaka", client: "Hues That Heal" },
     specs: { camera: "Mixed Media", lenses: "4ft x 6ft", location: "Lagos Studio", year: "2025" }
@@ -497,8 +501,8 @@ export const stockClips = [
   { id: 6, title: "Lost Sheep", category: "Paintings", duration: "3ft x 4ft", resolution: "Mixed Media", image: siteImages.art.sheepWater },
   { id: 7, title: "The Walk / Gaze", category: "Paintings", duration: "4ft x 5ft", resolution: "Mixed Media", image: siteImages.art.walkingOnWater },
   { id: 8, title: "If I May Touch His Garment", category: "Paintings", duration: "3ft x 4ft", resolution: "Acrylic on canvas", image: siteImages.art.framedWarm },
-  { id: 9, title: "Hope", category: "Paintings", duration: "2ft x 3ft", resolution: "Mixed Media", image: siteImages.art.forestPath },
-  { id: 10, title: "The Good Fight of Faith", category: "Paintings", duration: "4ft x 6ft", resolution: "Mixed Media", image: siteImages.art.forestPath }
+  { id: 9, title: "Hope", category: "Paintings", duration: "2ft x 3ft", resolution: "Mixed Media", image: siteImages.art.hope },
+  { id: 10, title: "The Good Fight of Faith", category: "Paintings", duration: "4ft x 6ft", resolution: "Mixed Media", image: siteImages.art.goodFight }
 ];
 
 export const pastEvents = [
